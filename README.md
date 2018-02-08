@@ -74,5 +74,5 @@ https://www.reddit.com/r/popular/
 hackernews same as reddit:
 https://news.ycombinator.com/
 
-free programming books:
+free programming books:  
 https://github.com/EbookFoundation/free-programming-books/blob/master/free-programming-books.md

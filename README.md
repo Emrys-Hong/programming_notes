@@ -3,9 +3,13 @@ youtube video tutorials:
 https://www.youtube.com/watch?v=OoUX-nOEjG0
 stanford machine learning video on computer vision
 
+
+
 morvan python notes:
 *****************************************************************************************************************************
 https://morvanzhou.github.io
+
+
 
 FPGA learning tutorials:
 *****************************************************************************************************************************
@@ -22,6 +26,7 @@ dropbox link on slides of introduction to FPGA:
 https://www.dropbox.com/sh/9dyz4xdu7rsqx64/AAC-4mbCsUmG2_87_RrndnOda?dl=0
 
 
+
 matlab notes:
 *****************************************************************************************************************************
 matlab onramp and deep learning on ramp --official website:
@@ -29,6 +34,8 @@ https://matlabacademy.mathworks.com/?s_v1=13910&elqem=1554470_ENU-TAH-LEU-ANNOUN
 
 udemy:
 https://www.udemy.com/home/my-courses/learning/
+
+
 
 online learning resources:
 *****************************************************************************************************************************
@@ -77,7 +84,17 @@ https://news.ycombinator.com/
 free programming books:  
 https://github.com/EbookFoundation/free-programming-books/blob/master/free-programming-books.md
 
+
+
 classes that i have already taken:
 _____________________________________________________________________________________________________________________________
 
 https://www.youtube.com/watch?v=d14TUNcbn1k&list=PLC1qU-LWwrF64f4QKQT-Vg5Wr4qEE1Zxk&index=4
+
+
+
+learn python websites:
+____________________________________________________________________________________________________________________________
+https://www.python-course.eu/python3_history_and_philosophy.php
+
+

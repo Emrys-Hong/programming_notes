@@ -1,0 +1,210 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Mar 14 11:35:50 2017
+
+@author: Lim Jie Hong
+"""
+
+#########################################################
+""" COLLECTION DATA TYPES (Tuple) """
+#########################################################
+"""Accessing Values in String"""
+str1 = 'Panda!'
+print str1[0]        #Should get 'P'
+print str1[0:5]      #Should get 'Panda'
+print str1[0:4:2]    #Should get 'Pn'
+#########################################################
+"""Updating Strings"""
+str1 = 'Panda!'
+str2 = 'Food!'
+str3 = str1 + str2
+print str3          #Should get 'Panda!Food!'
+str3 = str1[:5] + str2
+print str3          #Should get 'PandaFood!'
+"""Cannot add non-str types to strings"""
+#########################################################
+"""BackSlash Functions"""
+"""\b = backspace """
+str1 = 'Panda!\b Food!'     #Should get 'PandaFood!'
+print str1
+#########################################################
+"""\n = newline"""
+str1 = 'Panda!\nFood!'      #Should get 'Panda!
+#                                       Food!'
+print str1
+#########################################################
+"""\r = add signs only to end of whatever comes after"""
+str1 = 'Panda!\rFood!'      #Should get 'Food!!'
+print str1
+str1 = 'Panda\rFood!'       #Should get 'Food!'
+print str1
+#########################################################
+"""\t = add tab space"""
+str1 = 'Panda!\tFood!'      #Should get 'Panda!  Food!'
+print str1
+#########################################################
+"""String Operators"""
+" + : Add String to String"
+str1 = 'Panda!'
+str2 = 'Food!'
+str3 = str1 + str2
+print str3          #Should get 'Panda!Food!'
+#########################################################
+" * : Reptition of String"
+str1 = 'Panda!'
+str1 = str1*4
+print str1          #Should get Panda!Panda!Panda!Panda!
+#########################################################
+" in : Check if value is in String"
+str1 = 'Panda!'
+print 'P' in str1   #Should get True
+print 'p' in str1   #Should get False
+"""Take note that letters(Captial or small letter, i.e. P or p is different in String)"""
+#########################################################
+" not in: Check if value is not in String"
+str1 = 'Panda!'
+print 'P' not in str1   #Should get False
+print 'p' not in str1   #Should get True
+#########################################################
+" % : formats String"
+"""Check String Formatting Operator I also not sure"""
+#########################################################
+"""Useful Built-In String Functions""" #**There are more then is stated here**
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+############## ####           #### #########    ##############
+      ##       ## ##         ## ## ##      ##         ##
+      ##       ##  ##      ##   ## ##      ##         ##
+      ##       ##   ##    ##    ## ########           ##
+      ##       ##    ##  ##     ## ##                 ##
+      ##       ##     ####      ## ##                 ##
+############## ##      ##       ## ##                 ##
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""split(str="", num=string.count(str)): Splits string according to delimiter str (space if not provided) and returns list of substrings; split into at most num substrings if given."""
+str1 = 'Panda Food Sleep Panda Food Sleep'
+print str1.split()              #Should get ['Panda', 'Food', 'Sleep', 'Panda', 'Food', 'Sleep']
+str1 = 'Panda, Food, Sleep, Panda, Food, Sleep'
+print str1.split()              #Should get ['Panda,', 'Food,', 'Sleep,', 'Panda,', 'Food,', 'Sleep']
+print str1.split(',')           #Should get ['Panda', 'Food', 'Sleep', 'Panda', 'Food', 'Sleep']
+#########################################################
+"""splitlines( num=string.count('\n')): Splits string at all (or num) NEWLINEs and returns a list of each line with NEWLINEs removed."""
+str1 = 'Panda Food Sleep\nPanda Food Sleep\nPanda Food Sleep\nPanda Food Sleep\nPanda Food Sleep\n'
+print str1
+print str1.splitlines()         #Should get ['Panda Food Sleep', 'Panda Food Sleep', 'Panda Food Sleep', 'Panda Food Sleep', 'Panda Food Sleep']
+#########################################################
+"""startswith(str, beg=0,end=len(string)): Determines if string or a substring of string (if starting index beg and ending index end are given) starts with substring str; returns true if so and false otherwise."""
+str1 = 'Panda Food Sleep Panda Food Sleep'
+print str1.startswith('a')	     #Should get False
+print str1.startswith('P')      #Should get True
+#########################################################
+"""strip([chars]): Performs both lstrip() and rstrip() on string"""
+str1 = 'Panda Food Sleep Work'
+print str1.strip('Work')        #Should get 'Panda Food Sleep'
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+#########################################################
+"capitalize(): Capitalizes first letter of string"
+str1 = 'Panda!'
+print str1.capitalize()     #Should get 'Panda!'
+#########################################################
+"count(str, beg= 0,end=len(string)): Counts how many times str occurs in string or in a substring of string if starting index beg and ending index end are given."
+str1 = 'Panda!'
+print str1.count('a')       #Should get 2 **type 'integer'**
+print str1.count('a',0,1)   #Should get 0 **type 'integer'**
+"""For above, str1.count('a',0,1) checks from str1[0] to str1[1] which has no 'a'"""
+#########################################################
+"""find(str, beg=0 end=len(string)): Determine if str occurs in string or in a substring of string if starting index beg and ending index end are given returns index if found and -1 otherwise"""
+str1 = 'Panda!'
+print str1.find('a')       #'a' exist => Should get 1 **type 'integer'**
+print str1.find('z')       #'z' does not exist => Should get -1 **type 'integer'**
+#########################################################
+"""rfind(str, beg=0,end=len(string)): Same as find(), but search backwards in string."""
+str1 = 'Panda'
+print str1.rfind('a')    #Should get 4 **type 'integer'**
+#########################################################
+"""index(str, beg=0, end=len(string)): Same as find(), but error if str not found."""
+str1 = 'Panda!'
+print str1.index('P')      #'P' exist => Should get 0 (return position(index) in String)
+#########################################################
+"""rindex( str, beg=0, end=len(string)): Same as index(), but search backwards in string."""
+str1 = 'Panda'
+print str1.rindex('a')   #Should get 4 **type 'integer'**
+#########################################################	
+"""lstrip(): Removes all leading whitespace in string."""
+str1 = ' Panda'
+print str1.lstrip()       #Should get 'Panda'	
+#########################################################
+"""rstrip(): Removes all trailing whitespace of string."""
+str1 = 'Panda '
+print str1.rstrip()   #Should get 'Panda' compared to 'Panda '	
+#########################################################
+"""isalnum(): Returns true if string has at least 1 character and all characters are alphanumeric and false otherwise."""
+str1 = 'Panda!'
+str2 = '0222'
+print str1.isalnum()        #Should return False
+print str2.isalnum()        #Should return True
+#########################################################
+"""isalpha(): Returns true if string has at least 1 character and all characters are alphabetic and false otherwise."""
+str1 = 'Panda'
+str2 = '0222'
+print str1.isalpha()        #Should return True
+print str2.isalpha()        #Should return False
+#########################################################	
+"""isdigit(): Returns true if string contains only digits and false otherwise."""
+str1 = 'Panda'
+str2 = '0222'
+print str1.isdigit()        #Should return False
+print str2.isdigit()        #Should return True
+#########################################################
+"""islower(): Returns true if string has at least 1 cased character and all cased characters are in lowercase and false otherwise."""
+str1 = 'Panda'
+str2 = 'panda'
+print str1.islower()        #Should return False
+print str2.islower()        #Should return True 
+#########################################################
+"""isspace(): Returns true if string contains only whitespace characters and false otherwise."""
+str1 = 'Panda'
+str2 = ' '
+print str1.isspace()        #Should return False
+print str2.isspace()        #Should return True 	
+#########################################################
+"""isupper(): Returns true if string has at least one cased character and all cased characters are in uppercase and false otherwise."""
+str1 = 'Panda'
+str2 = 'PANDA'
+print str1.isupper()        #Should return False
+print str2.isupper()        #Should return True
+#########################################################
+"""join(seq): Merges (concatenates) the string representations of elements in sequence seq into a string, with separator string."""
+str1 = 'Panda'
+seq = '123123'
+print str1.join(seq)        #Should get '1Panda2Panda3Panda1Panda2Panda3'
+"""Adds seq[x] with str as seperation"""
+#########################################################
+"""upper(): Converts lowercase letters in string to uppercase."""
+str1 = 'Panda'
+print str1.upper()          #Should get 'PANDA'
+#########################################################
+"""swapcase(): Inverts case for all letters in string."""
+str1 = 'Panda'
+print str1.swapcase()       #Should get 'pANDA'
+#########################################################
+"""max(str): Returns the max alphabetical character from the string str."""
+str1 = 'Panda'
+str2 = '0222Bb'
+print max(str1)          #Should get 'n' (Min: '12345---ABCDEF---xyz:Max)
+print max(str2)          #Should get 'b' (Min: '12345---ABCDEF---xyz:Max)
+#########################################################
+"""min(str): Returns the min alphabetical character from the string str."""
+str1 = 'Panda'
+str2 = '0222Bb'
+print min(str1)          #Should get 'P' (Min: '012345---ABCDEF---xyz:Max)
+print min(str2)          #Should get 'b' (Min: '012345---ABCDEF---xyz:Max)
+#########################################################
+"""replace(old, new [, max]): Replaces all occurrences of old in string with new or at most max occurrences if max given."""
+str1 = 'Panda'
+print str1.replace('a','A')     #Should get 'PAndA'
+#########################################################	
+
+
+
+
+
+

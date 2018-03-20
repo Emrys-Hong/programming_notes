@@ -18,3 +18,14 @@ False
 '''
 
 mydictionary:
+class
+class1.__dict__
+for state machine
+start_state =
+class1.start()
+class1.get_next_values(self,state,inp)
+class1.transduce([list1])
+
+super.__init__(no self here)
+
+

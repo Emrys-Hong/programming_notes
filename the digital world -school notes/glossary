@@ -27,5 +27,5 @@ class1.get_next_values(self,state,inp)
 class1.transduce([list1])
 
 super.__init__(no self here)
-
+isinstance(object, classinfo)
 

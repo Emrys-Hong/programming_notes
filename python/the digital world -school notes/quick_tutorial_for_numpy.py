@@ -1,4 +1,4 @@
-https://docs.scipy.org/doc/numpy-dev/user/quickstart.html
+'''https://docs.scipy.org/doc/numpy-dev/user/quickstart.html'''
 
 import numpy as np
 np.array([],dtype=np.float32) # this create a numpy array

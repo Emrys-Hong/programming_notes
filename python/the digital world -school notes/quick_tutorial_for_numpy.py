@@ -1,5 +1,5 @@
 '''https://docs.scipy.org/doc/numpy-dev/user/quickstart.html'''
-
+'''https://www.tutorialspoint.com/numpy/numpy_linear_algebra.htm'''
 import numpy as np
 np.array([],dtype=np.float32) # this create a numpy array
 

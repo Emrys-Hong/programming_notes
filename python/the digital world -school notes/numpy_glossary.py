@@ -45,8 +45,8 @@ a[1:2,3]
 for i in a.flat:
   print(i)
   
-np.hstack(a,b) # stack horizontally
-np.vstack(a,b) # stack vertically
+np.hstack([a,b]) # stack horizontally
+np.vstack([a,b]) # stack vertically
 np.hsplit(a,3) # split horizontally
 np.vsplit(a,3) # split horizontally
 >>> np.r_[1:4,0,4] # the same for np.c_

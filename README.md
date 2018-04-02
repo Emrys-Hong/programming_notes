@@ -71,8 +71,4 @@ https://www.youtube.com/watch?v=d14TUNcbn1k&list=PLC1qU-LWwrF64f4QKQT-Vg5Wr4qEE1
 
 
 
-learn python websites:
-____________________________________________________________________________________________________________________________
-https://www.python-course.eu/python3_history_and_philosophy.php
-
 

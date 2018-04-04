@@ -192,3 +192,9 @@ np.linalg.eig(j)
 >>> plt.show()
 # random
 v = np.random.normal(mu,sigma,10000)
+
+# if you want to swap the rows
+arr = np.array([10, 20, 30, 40, 50])
+idx = [1, 0, 3, 4, 2]
+arr[idx]
+array([20, 10, 40, 50, 30])

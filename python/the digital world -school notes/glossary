@@ -29,4 +29,4 @@ class1.transduce([list1])
 super.__init__(no self here)
 isinstance(object, classinfo)
 hasattri(class,attribute_name)
-
+dir(class)

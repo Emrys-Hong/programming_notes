@@ -70,7 +70,7 @@ s.lstrip() Remove leading whitespace from s # ' hello ' => 'hello '
 s.rstrip() Remove trailing whitespace from s # ' hello ' => ' hello'
 s.zfill(width) Left fill s with ASCII '0' digits with total length width # '42' => '00042'
 ```
-# to decide whether it is what type of string
+to decide whether it is what type of string
 ```s为字符串
 s.isalnum() 所有字符都是数字或者字母
 s.isalpha() 所有字符都是字母

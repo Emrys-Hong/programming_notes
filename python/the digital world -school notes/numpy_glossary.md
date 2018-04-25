@@ -102,7 +102,7 @@ for x in np.nditer(a, order='F', flags=['readwrite']):
 for x,y in np.nditer([a,b]):
     print(x,y)
  # x and y must have the same colum dimension
-``` 
+
 >>> c = np.array( [[[  0,  1,  2],               # a 3D array (two stacked 2D arrays)
 ...                 [ 10, 12, 13]],
 ...                [[100,101,102],
@@ -115,7 +115,7 @@ array([[100, 101, 102],
 >>> c[...,2]                                   # same as c[:,:,2]
 array([[  2,  13],
        [102, 113]])
-
+```
 # shallow copy
 ```>>> c = a.view()
 >>> c is a

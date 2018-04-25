@@ -77,6 +77,15 @@ array([[ 0,  1,  2,  3],
 >>> a[i,j]                                     # i and j must have equal shape
 array([[ 2,  5],
        [ 7, 11]])
+# find all the index of entries equal to a particular number
+import numpy as np
+values = np.array([1,2,3,1,2,4,5,6,3,2,1])
+searchval = 3
+ii = np.where(values == searchval)[0]
+
+returns:
+
+ii ==>array([2, 8])
 ```
 # nditer
 ```for x in np.nditer(a,order='C'): # this is printing in row order

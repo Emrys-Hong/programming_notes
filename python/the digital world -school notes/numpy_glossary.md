@@ -1,6 +1,7 @@
+# copied the websites from 
 '''https://docs.scipy.org/doc/numpy-dev/user/quickstart.html'''
 '''https://www.tutorialspoint.com/numpy/numpy_linear_algebra.htm'''
-import numpy as np
+
 np.array([],dtype=np.float32) # this create a numpy array
 
 np.arange(start,stop,step).reshape(n1,n0) # create a numpy array

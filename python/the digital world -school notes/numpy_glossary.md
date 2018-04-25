@@ -1,27 +1,29 @@
-# copied the websites from 
+# material is from:
 '''https://docs.scipy.org/doc/numpy-dev/user/quickstart.html'''
 '''https://www.tutorialspoint.com/numpy/numpy_linear_algebra.htm'''
-
-np.array([],dtype=np.float32) # this create a numpy array
-
+## this create a numpy array, reshape and resize
+```np.array([],dtype=np.float32) 
 np.arange(start,stop,step).reshape(n1,n0) # create a numpy array
 np.linspace(start,stop,num_points).resize(n1,n0) # resize a shaped array
-
-# + - * / are all applicable for numpy array
-a = np.array([1,1,1])
+```
+## + - * / are all applicable for numpy array, and they will operate on each elements one by one.
+# array attributes
+```a = np.array([1,1,1])
 a.itemsize # how much space one datatype occupy # output 4
 a.size # how many items
 a.shape # shape
 a.ndim # what is the dimension
 a.dtype # data type
+```
 
 np.zeros( (3,4) )
 np.ones( (3,4) )
-
-a.ravel() # same as flatten()
+# flatten
+```a.ravel() # same as flatten()
 a.flatten()
-
-a.min()
+```
+# min max
+```a.min()
 a.max()
 a.sum(axis=1) # sum all the row together)
 a.cumsum() # the output have the same dimension as the a
@@ -30,14 +32,13 @@ a.cumsum() # the output have the same dimension as the a
 corrcoef, cov, cross, cumprod, cumsum, diff, dot, floor, inner, inv, lexsort, max, maximum, 
 mean, median, min, minimum, nonzero, outer, prod, re, round, sort, std, sum, trace, transpose,
 var, vdot, vectorize, where'''
-
-a.T #transpose
+```
+# other operations
+```a.T #transpose
 a.dot(b)
 a*b
 np.dot(a,b)
 sin(a)
-
-
 np.sqrt(a) # sqrt
 np.std(a) # standard diviation
 # slicing
@@ -45,20 +46,21 @@ a[1:2,3]
 
 for i in a.flat:
   print(i)
-  
-np.hstack([a,b]) # stack horizontally
+```
+# combine arrays
+```np.hstack([a,b]) # stack horizontally
 np.vstack([a,b]) # stack vertically
 np.hsplit(a,3) # split horizontally
 np.vsplit(a,3) # split horizontally
 >>> np.r_[1:4,0,4] # the same for np.c_
 array([1, 2, 3, 0, 4])
+```
 
-
-# if the input is the following
-a = np.arange(12).reshape(3,4)
+# select particular entry
+```a = np.arange(12).reshape(3,4)
 b = a > 4
 print(b)
-# array([[False,False,Flase,False],[False,True,True......])
+>> array([[False,False,Flase,False],[False,True,True......])
 a[b] = 100
 print(a)
 # array([0,1,2,3],[4,100,100,100],...])
@@ -75,14 +77,14 @@ array([[ 0,  1,  2,  3],
 >>> a[i,j]                                     # i and j must have equal shape
 array([[ 2,  5],
        [ 7, 11]])
-
+```
 # nditer
-for x in np.nditer(a,order='C'): # this is printing in row order
+```for x in np.nditer(a,order='C'): # this is printing in row order
     print(x)
     
 # 0,1,2,3,4,5....
 
-for x in np.nditer(a, order='F'):
+for x in np.nditer(a, order='F'): # printing in column order
     print(x)
     
 # 0,4,8,1,5,9
@@ -100,7 +102,7 @@ for x in np.nditer(a, order='F', flags=['readwrite']):
 for x,y in np.nditer([a,b]):
     print(x,y)
  # x and y must have the same colum dimension
- 
+``` 
 >>> c = np.array( [[[  0,  1,  2],               # a 3D array (two stacked 2D arrays)
 ...                 [ 10, 12, 13]],
 ...                [[100,101,102],
@@ -115,7 +117,7 @@ array([[  2,  13],
        [102, 113]])
 
 # shallow copy
->>> c = a.view()
+```>>> c = a.view()
 >>> c is a
 False
 >>> c.base is a                        # c is a view of the data owned by a
@@ -143,16 +145,18 @@ False
 array([[   0,   10,   10,    3],
        [1234,   10,   10,    7],
        [   8,   10,   10,   11]])
+```
 
-# the index of the array
+# get index of entry
+```
 ind = data.argmax(axis=0)  
 
 # all and any
 np.all(data_max == data.max(axis=0))
 >>> True
-
+```
 # ix function can create difference shapes
->>> a = np.array([2,3,4,5])
+```>>> a = np.array([2,3,4,5])
 >>> b = np.array([8,5,4])
 >>> c = np.array([5,4,6,8,3])
 >>> ax,bx,cx = np.ix_(a,b,c)
@@ -167,9 +171,9 @@ array([[[8],
         [4]]])
 >>> ax.shape, bx.shape, cx.shape
 ((4, 1, 1), (1, 3, 1), (1, 1, 5))
-
+```
 # linear algebra
-np.linalg.inv(a)
+```np.linalg.inv(a)
 np.transpose(a)
 np.eye(some number) # identity matrix interger stands for the size
 np.trace(a)
@@ -191,11 +195,13 @@ np.linalg.eig(j)
  (n, bins) = np.histogram(v, bins=50, normed=True)  # NumPy version (no plot)
 >>> plt.plot(.5*(bins[1:]+bins[:-1]), n)
 >>> plt.show()
+```
 # random
-v = np.random.normal(mu,sigma,10000)
-
+```v = np.random.normal(mu,sigma,10000)
+```
 # if you want to swap the rows
-arr = np.array([10, 20, 30, 40, 50])
+```arr = np.array([10, 20, 30, 40, 50])
 idx = [1, 0, 3, 4, 2]
 arr[idx]
 array([20, 10, 40, 50, 30])
+```

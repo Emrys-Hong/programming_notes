@@ -5,7 +5,7 @@ some of the magic functions come from: [this website](https://www.dataquest.io/b
 %reload_ext autoreload
 %autoreload 2
 %matplotlib inline // this can plot without plt.show() and can plot inline
-
+```
 # important tricks
 ```
 press H for more shortcuts

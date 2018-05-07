@@ -13,6 +13,8 @@ press tab for auto fill in
 press shift + tab for arg help
 press shift + tab twice for documentation help
 press ?string search for documentation and have the same effect as shift + tab
+press ?? string search for see the actual code for documentation
+!ls *.csv press ! to execute terminal command
 
 ```
 # uncommon tricks
@@ -63,4 +65,15 @@ def some_useless_slow_function():
         x = numpy.random.randint(0, 10000)
         append_if_not_exists(arr, x)
         
+can type latex format in the markdown shell and then it automatically become latex format
+
+run code in a different kernel
+%%bash
+%%HTML
+%%python2
+%%python3
+%%ruby
+%%perl
+
+
 ```

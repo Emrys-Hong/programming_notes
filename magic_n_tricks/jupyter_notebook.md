@@ -14,6 +14,7 @@ press shift + tab for arg help
 press shift + tab twice for documentation help
 press ?string search for documentation and have the same effect as shift + tab
 press ?? string search for see the actual code for documentation
+press ctrl+shift+ - to split the cell
 !ls *.csv press ! to execute terminal command
 
 ```

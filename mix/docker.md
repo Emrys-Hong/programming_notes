@@ -26,9 +26,6 @@ docker container ls
 docker container ls --all
 docker container ls -aq
 
-## List executed docker containers
-docker ps -a
-
 ## Change docker name
 docker run --name my-hello hello-world
 
@@ -42,6 +39,17 @@ docker rm $(docker ps -a -f status=exited -q)
 -v [path to local]:[path inside container]
 docker run -it --name my-linux-container --rm -v /c/Users/:/my-data ubuntu bash
 
+## List all the container name
+docker ps -a
+
+## List latest created container
+docker ps -l
+
+## List running container
+docker ps
+
+## Rename the docker
+docker rename my_container my_new_container
 ```
 
 # docker run hello-world
@@ -94,10 +102,12 @@ RUN apt-get upgrade && apt-get update && apt-get install -y python3
 and then build your images, each line creates a new container, and containers build on top of other containers
 
 ## Build your image
-docker build -t my-ubuntu-image
+docker build -t my-ubuntu-image .
 
 ## Run the image
 docker run my-ubuntu-image
+OR
+nvidia-docker run -it i351707
 
 ## add -it flag to run interactive 
 docker run -it my-ubuntu-image

@@ -1,7 +1,11 @@
 # the root website:
+
 create your ubuntu image with docker: https://www.youtube.com/watch?v=JprTjTViaEA
 
 docker cheetsheet: https://jonnylangefeld.github.io/learning/Docker/How%2Bto%2BDocker.html
+
+## get started with docker official website:
+https://docs.docker.com/get-started/part3/#docker-composeyml
 
 # docker commands:
 ```

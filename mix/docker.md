@@ -50,6 +50,12 @@ docker ps
 
 ## Rename the docker
 docker rename my_container my_new_container
+
+## start docker to execute
+docker start <name>
+
+## execute docker
+docker exec -it 79b3fa70b51d \bin\sh
 ```
 
 # docker run hello-world

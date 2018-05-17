@@ -118,3 +118,22 @@ nvidia-docker run -it i351707
 ## add -it flag to run interactive 
 docker run -it my-ubuntu-image
 ```
+
+# core commands
+```
+## build a container without IP address
+nvidia-docker run -it -d --name i351707_Pengfei -v /home/i351707:/root/i351707 -v /data/i351707:/data lssinh010.sin.sap.corp/nvidia/tensorflow /bin/bash
+-d for detached mode
+
+## build a container with IP address
+nvidia-docker run -it -d --name i311828_lr_py3 -p 8888:8888 -p 6006:6006 -e NCCL_TOPOLOGY=CUBEMESH -v /home/i311828:/root/i311828/ -v /data/i311828:/data/ lssinh010.sin.sap.corp/mlsgdgx1/i311828_lr_py3 /bin/bash
+
+## enter the container
+docker exec -it /bin/bash
+# cd 
+to live the workspace and cd your inumber
+```
+# question
+```
+how to use tag
+```

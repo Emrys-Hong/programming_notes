@@ -127,10 +127,11 @@ nvidia-docker run -it -d --name i351707_Pengfei -v /home/i351707:/root/i351707 -
 can try other port as well
 
 ## build a container with IP address
-nvidia-docker run -it -d --name i311828_lr_py3 -p 8888:8888 -p 6006:6006 -e NCCL_TOPOLOGY=CUBEMESH -v /home/i311828:/root/i311828/ -v /data/i311828:/data/ lssinh010.sin.sap.corp/mlsgdgx1/i311828_lr_py3 /bin/bash
+nvidia-docker run -it -d --name Pengfei -p 8889:8888 -p 6007:6006 -v /home/i351707:/root/i351707_Pengfei/ -v /data/i351707:/data/ lssinh010.sin.sap.corp/mlsgdgx1/i311828_py3  /bin/bash
+--how to create your docker, change the port number into your own number
 
 ## enter the container
-docker exec -it /bin/bash
+docker exec -it <your docker name> /bin/bash
 # cd 
 to live the workspace and cd your inumber
 ```

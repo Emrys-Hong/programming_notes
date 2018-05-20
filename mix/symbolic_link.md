@@ -1,6 +1,6 @@
 To create a new symlink (will fail if symlink exists already):
-
-```ln -s /path/to/file /path/to/symlink
+```
+ln -s existingpath /folder/name/you/create
 ```
 To create or update a symlink:
 ```

@@ -2,7 +2,7 @@ to check envs information:
 conda info --envs
 
 activate new environment:
-conda create -n tensorflow pip python=3.6
+conda create -n <name> pip/anaconda python=3.6
 
 to enter a environment:
 source activate tensorflow

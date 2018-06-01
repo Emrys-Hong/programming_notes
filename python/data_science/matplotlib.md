@@ -1,3 +1,4 @@
+```
 from matplotlib import pyplot as plt
 plt.figure(num=3, figsize=(8,5),)
 plt.plot(x,y)
@@ -9,6 +10,7 @@ plt.xlabel('x_name')
 plt.xlim( (start,end) ) # to see where x start and ends
 plt.plot(x,y,color='red', linewidth=1.0, linestyle='--',label='label_name')
 plt.legend(handles=[first_plot,second_plot],labels=['up','down'],loc='best')
+```
 -----------------------------------------------------------------------------------------------------------------------------
 #### others code
 # 3 - simple plot

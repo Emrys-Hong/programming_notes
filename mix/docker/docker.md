@@ -69,6 +69,9 @@ svendowideit/testimage            version3            f5283438590d        16 sec
 
 ## docker restart container
 docker restart <container_name>
+
+## docker remove images
+docker rmi image_name:version/image-id
 ```
 
 # docker run hello-world

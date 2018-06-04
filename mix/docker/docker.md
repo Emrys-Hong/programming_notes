@@ -56,6 +56,19 @@ docker start <name>
 
 ## execute docker
 docker exec -it 79b3fa70b51d \bin\sh
+
+## build the image from docker file
+docker build -f dockerfiles/Dockerfile.prod  -t myapp_prod .         ## Don’t forget the . character at the end, which sets the build context to the current directory.
+
+## docker commit
+$ docker commit c3f279d17e0a  svendowideit/testimage:version3
+\ f5283438590d
+$ docker images
+REPOSITORY                        TAG                 ID                  CREATED             SIZE
+svendowideit/testimage            version3            f5283438590d        16 seconds ago      335.7 MB
+
+## docker restart container
+docker restart <container_name>
 ```
 
 # docker run hello-world

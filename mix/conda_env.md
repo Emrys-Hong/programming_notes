@@ -17,8 +17,8 @@ to uninstall a package:
 conda uninstall package
 
 to update a package:
-conda update package
-
+conda update package OR
+conda update --all
 
 see more at this website
 https://conda.io/docs/user-guide/tasks/manage-environments.html

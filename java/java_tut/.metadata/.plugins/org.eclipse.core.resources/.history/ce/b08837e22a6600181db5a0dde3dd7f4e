@@ -1,0 +1,23 @@
+package mySecondTut;
+
+import java.util.Scanner;
+import java.util.*;
+
+public class javaLessonTwo {
+	static Scanner userInput = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		
+		System.out.print("your number");
+		
+		if (userInput.hasNextInt()){
+			
+			int number = userInput.nextInt();
+			
+			System.out.println("you entered:" + number);
+		} else {
+			System.out.println("enter a int next time")
+		}
+	}
+	
+}

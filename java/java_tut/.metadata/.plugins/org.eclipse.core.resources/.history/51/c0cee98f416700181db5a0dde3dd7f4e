@@ -1,0 +1,21 @@
+package mySecondTut;
+import java.util.Scanner;
+
+public class javaLessonFive {
+	// static for you to access through different classes
+	static double myPI = 3.14159; // class variable
+	
+	public static void main (String[] args) {
+		// define a function
+		
+		addThem(1,2);
+	}
+	public static int addThem(int a, int b) {
+		double smallPI = 3.140; //local Variable
+		
+		System.out.println("Global" + myPI);
+		
+		return 1;
+	}
+
+}

@@ -1,0 +1,49 @@
+package mySecondTut;
+
+public class HelloWorld1 {
+	// class variables must start with static if you want access them with any other methods in the same class
+	static String randomString = "String to print";
+	
+	// constant variables are defined with final
+	// final need to all capitalized
+	static final double PINUM = 3.14159;
+	
+	public static void main(String[] args){
+		// System.out.println("Hello World");
+	
+	
+		// java primitive data types
+		byte bigByte = 127; // -128 to 127 2^7
+		short bigShort = 32767; // 2^15
+		int bigInt = 2147483647; // -2147483648 to 2147483647
+		long bigLong = 9223372036854775807L; // 2^63
+		double bigDouble = 3.1234567890; // double is longer than float (15 decimal places)
+		float bigFloat = 3.14F; // must end a float with F (float is 6 decimal places)
+		boolean trueOfFalse = true;
+		char randomChar = 'A';
+		char anotherChar = 65; // 65 is the character code for A
+		String randomString = "i am  a random string";
+		
+		// convert byte to string
+		String byteString = Byte.toString(bigByte);
+		// also have Integer.toString and etc
+		
+		double aDoubleValue = 3.141515151;
+		int doubleToInt = (int) aDoubleValue;
+		// this is how you convert double to int
+		
+		String intString = Integer.toString(bigInt);
+		int stringToInt = Integer.parseInt(intString);
+		// turn Int to string and then turn int to string
+		
+		
+		System.out.println(Float.MAX_VALUE);
+		System.out.println(Double.MAX_VALUE);
+		
+	}
+	
+	
+	
+	
+	
+}

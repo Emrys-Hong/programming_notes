@@ -1,0 +1,40 @@
+package first_java_tut;
+
+import java.util.Scanner;
+import java.util.*;
+public class Animal {
+	
+	public static final double FAVNUMBER = 1.618;
+	
+	// variables can start off with _ letter or % 
+	private String name;
+	private int weight;
+	private boolean hasOwner = false;
+	private byte age;
+	private long uniqueID;
+	private char favouriteChar;
+	private double speed;
+	private float height;
+	// double is 64 bit and float is 32 bit
+	protected static int numberOfAnimals = 0;
+	// only for this class can access protected
+	
+	static Scanner userinput = new Scanner(System.in);
+	// user input
+	public Animal() {
+		numberOfAnimals++;
+		
+		int sumOfNumbers = 5 + 1;
+		System.out.println("5 + 1 = " + sumOfNumbers);
+		
+	}
+	public static void main(String[] args){
+		Animal theAnimal = new Animal();
+	}
+	// this makes it a java 
+	// we do not need to create the super because we do not want inhereted
+	
+	
+	
+
+}

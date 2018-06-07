@@ -97,6 +97,23 @@ For more examples and ideas, visit:
  https://docs.docker.com/engine/userguide/
  ```
  
+ # core commands
+```
+## build a container without IP address
+nvidia-docker run -it -d --name i351707_Pengfei -v /home/i351707:/root/i351707 -v /data/i351707:/data lssinh010.sin.sap.corp/nvidia/tensorflow(i351707) /bin/bash
+-d for detached mode
+can try other port as well
+
+## build a container with IP address
+nvidia-docker run -it -d --name Pengfei -p 8889:8888 -p 6007:6006 -v /home/i351707:/root/i351707_Pengfei/ -v /data/i351707:/data/ lssinh010.sin.sap.corp/mlsgdgx1/i311828_py3  /bin/bash
+--how to create your docker, change the port number into your own number
+
+## enter the container
+docker exec -it <your docker name> /bin/bash
+# cd 
+to live the workspace and cd your inumber
+```
+ 
  # create ubuntu system
 ```
 ## Create a ubuntu docker and use bash
@@ -110,6 +127,14 @@ exit
 
 ## List all the image we have download so dont have to download again
 docker images
+
+## build image with "username" and "tags"
+docker build -t <username>/dev-fedora:latest .
+
+## After building push the image
+docker push <username>/dev-fedora:latest
+
+
 ```
 
 # dockerfile
@@ -135,22 +160,7 @@ nvidia-docker run -it i351707
 docker run -it my-ubuntu-image
 ```
 
-# core commands
-```
-## build a container without IP address
-nvidia-docker run -it -d --name i351707_Pengfei -v /home/i351707:/root/i351707 -v /data/i351707:/data lssinh010.sin.sap.corp/nvidia/tensorflow(i351707) /bin/bash
--d for detached mode
-can try other port as well
 
-## build a container with IP address
-nvidia-docker run -it -d --name Pengfei -p 8889:8888 -p 6007:6006 -v /home/i351707:/root/i351707_Pengfei/ -v /data/i351707:/data/ lssinh010.sin.sap.corp/mlsgdgx1/i311828_py3  /bin/bash
---how to create your docker, change the port number into your own number
-
-## enter the container
-docker exec -it <your docker name> /bin/bash
-# cd 
-to live the workspace and cd your inumber
-```
 # question
 ```
 how to use tag

@@ -44,6 +44,8 @@ but emrys made some slight modifications as well
 1.38   Start a static HTTP server in any directory
 1.39   Learn the Zen of Python
 1.40   Use C-Style Braces Instead of Indentation to Denote Scopes
+1.5    merge dictionay
+1.6    get minimum value in the dictionary
 ```
 
 # 1.7   List slices with step (a[start:end:step])
@@ -541,4 +543,13 @@ If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!
 1.40   Use C-Style Braces Instead of Indentation to Denote Scopes
 >>> from __future__ import braces
+```
+# 1.5 merge dictionary
+```
+dictc = {**dicta, **dictb}
+```
+
+# 1.6 get minimum value in the dictionary
+```
+{k:v for k,v in dict.items() if v == min(dict.values())}
 ```

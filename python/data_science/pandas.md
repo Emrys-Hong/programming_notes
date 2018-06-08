@@ -23,3 +23,8 @@ df = pd.DataFrame(dict,index=[list of index])
 # concat vertically
 df = pd.concat([df1, df2], axis = 0)
 ```
+
+# get value
+```
+df.get_value(index, column)
+```

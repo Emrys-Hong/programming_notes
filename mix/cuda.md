@@ -22,3 +22,6 @@ tfconfig.gpu_options.allow_growth=True
 and on the session
 sess = tf.Session(graph=detection_graph, config=tfconfig)
 ```
+
+### kill cuda session
+sudo kill -9 PID

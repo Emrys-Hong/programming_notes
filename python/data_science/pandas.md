@@ -21,7 +21,7 @@ df = pd.DataFrame(dict,index=[list of index])
 # concat df
 ```
 # concat vertically
-df = pd.concat([df1, df2], axis = 0)
+df = pd.concat([df1, df2], axis = 0) # default zero to let them concat along
 ```
 
 # get value

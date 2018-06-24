@@ -1,4 +1,4 @@
-followed the tutorial from [morvan python git](https://morvanzhou.github.io/tutorials/others/git/3-1-reset/)
+followed the tutorial from [morvan python git](https://morvanzhou.github.io/tutorials/others/git/)
 ## Set a new remote
 ```
 ## add new origin

@@ -1,4 +1,4 @@
-![tmux and screen cheetsheet](http://www.dayid.org/comp/tm.html)
+![tmux and screen cheetsheet](http://www.dayid.org/comp/tm.html.png)
 
 
 this cheetsheet is from MohamedAlaa 

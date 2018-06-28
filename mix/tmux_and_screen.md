@@ -1,3 +1,6 @@
+![tmux and screen cheetsheet](http://www.dayid.org/comp/tm.html)
+
+
 this cheetsheet is from MohamedAlaa 
 you can also see the video [tmux and vim](https://www.youtube.com/watch?v=5r6yzFEXajQ&t=38s), it is quite informative
 

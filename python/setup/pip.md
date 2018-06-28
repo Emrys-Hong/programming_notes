@@ -1,4 +1,4 @@
-# core commands from https://www.youtube.com/watch?v=U2ZN104hIcc
+core commands from https://www.youtube.com/watch?v=U2ZN104hIcc
 ```
 pip install <package>
 pip uninstall <package>

@@ -47,12 +47,8 @@ https://news.ycombinator.com/
 free programming books:  
 https://github.com/EbookFoundation/free-programming-books/blob/master/free-programming-books.md
 
-
-
-classes that i have already taken:
-_____________________________________________________________________________________________________________________________
-
-https://www.youtube.com/watch?v=d14TUNcbn1k&list=PLC1qU-LWwrF64f4QKQT-Vg5Wr4qEE1Zxk&index=4
+to be commented:
+[jike](http://wiki.jikexueyuan.com/)(software, backend, front end, big data; multiple programming languages, cs job interview)
 
 
 

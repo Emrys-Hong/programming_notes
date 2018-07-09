@@ -26,8 +26,8 @@ github:                           code-based;
 
 SUTD machine learning notes:      math; theory; intuition; basic; a lot of times not so useful in real life
 
-learning communities:             state of art; ask question; tricks; resources; chances
-(https://nurture.ai/)
+learning communities:             state of art; ask question; tricks; syllabus systematic resources; chances to know new people; environment
+[AI6](https://nurture.ai/)(https://nurture.ai/ai-saturdays)
 
 personal bloggers:                systematic; theory; but follow classic
 (e.g. nlp related: http://ruder.io/)

@@ -1,4 +1,4 @@
-## machine learning resources
+## machine learning experience
 
 ```
 morvan python:                    project based; entry level
@@ -28,6 +28,9 @@ SUTD machine learning notes:      math; theory; intuition; basic; a lot of times
 
 learning communities:             state of art; ask question; tricks; resources; chances
 (https://nurture.ai/)
+
+personal bloggers:                systematic; theory; but follow classic
+(e.g. nlp related: http://ruder.io/)
 ```
 
 not sure where to include:

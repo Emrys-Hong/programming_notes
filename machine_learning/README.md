@@ -1,5 +1,6 @@
 ## machine learning resources
 
+```
 morvan python:                    project based; entry level
 
 stanford computer vision:         systematic learning; theory
@@ -21,6 +22,11 @@ ml blogs:                         state-of-art; not really implemented; intuitio
 github:                           code-based;
 
 SUTD machine learning notes:      math; theory; intuition; basic; a lot of times not so useful in real life
+
+learning communities:             state of art; ask question; tricks; resources; chances
+(https://nurture.ai/)
+```
+
 not sure where to include:
 machine learning experts:
 http://yann.lecun.comyann

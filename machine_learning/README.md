@@ -22,7 +22,7 @@ youtube channel:                  application based; project-based; get more res
 ml blogs:                         state-of-art; not really implemented; intuition
 (medium; hackernoons)
 
-github:                           code-based;
+github:                           code-based; tensorflow, keras, pytorch, auto-sklearn state of art model
 
 SUTD machine learning notes:      math; theory; intuition; basic; a lot of times not so useful in real life
 
@@ -31,6 +31,10 @@ learning communities:             state of art; ask question; tricks; syllabus s
 
 personal bloggers:                systematic; theory; but follow classic
 (e.g. nlp related: http://ruder.io/)
+
+quora, zhihu                      insights; non academic;
+
+wikipedia                         systematic; quick; problem based; resourceful (ner)
 ```
 
 not sure where to include:

@@ -53,4 +53,6 @@ to be categorized:
 cornell all the papers about computer science state of art
 https://arxiv.org/
 
+[chinese biggest computer community](https://www.csdn.net/) # problem solving
+
 

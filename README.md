@@ -47,9 +47,10 @@ https://news.ycombinator.com/
 free programming books:  
 https://github.com/EbookFoundation/free-programming-books/blob/master/free-programming-books.md
 
-to be commented:
+to be categorized:
 [jike](http://wiki.jikexueyuan.com/)(software, backend, front end, big data; multiple programming languages, cs job interview)
 
-
+cornell all the papers about computer science state of art
+https://arxiv.org/
 
 

@@ -19,3 +19,8 @@ ml blogs:                         state-of-art; not really implemented; intuitio
 (medium; hackernoons)
 
 github:                           code-based;
+
+not sure where to include:
+machine learning experts:
+http://yann.lecun.comyann
+http://daggerfs.com/index.html#publications 贾扬清

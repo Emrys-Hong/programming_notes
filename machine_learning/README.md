@@ -12,7 +12,7 @@ google machine learning:          to be commented
 
 Andrew Ng deep learning:          to be commented
 
-youtube channel:                  application based; project-based
+youtube channel:                  application based; project-based; get more resources
 (sentdex, siraj, ect)                  
 
 ml blogs:                         state-of-art; not really implemented; intuition
@@ -20,6 +20,7 @@ ml blogs:                         state-of-art; not really implemented; intuitio
 
 github:                           code-based;
 
+SUTD machine learning notes:      math; theory; intuition; basic; a lot of times not so useful in real life
 not sure where to include:
 machine learning experts:
 http://yann.lecun.comyann

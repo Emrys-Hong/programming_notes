@@ -1,4 +1,4 @@
-## machine learning journey
+## machine learning resources
 
 morvan python:                    project based; entry level
 

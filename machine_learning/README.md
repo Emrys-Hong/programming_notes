@@ -1,16 +1,21 @@
-youtube video tutorials:
-https://www.youtube.com/watch?v=OoUX-nOEjG0
-stanford machine learning video on computer vision
+## machine learning journey
 
+morvan python:                    project based; entry level
 
+stanford computer vision:         systematic learning; theory
 
-morvan python notes:
-*****************************************************************************************************************************
-https://morvanzhou.github.io
+Andrew Ng machine learning:       systematic; machine learning math
 
-a tour around the machine learning algorithms:
-https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/
+fastai:                           state-of-art; intuition; code heavy; project based (recommend have some background first)
 
+google machine learning:          to be commented
 
-interesting machine learning project you can try:
-http://isteps.comp.nus.edu.sg/event/12th-steps/module/CS4240
+Andrew Ng deep learning:          to be commented
+
+youtube channel:                  application based; project-based
+(sentdex, siraj, ect)                  
+
+ml blogs:                         state-of-art; not really implemented; intuition
+(medium; hackernoons)
+
+github:                           code-based;

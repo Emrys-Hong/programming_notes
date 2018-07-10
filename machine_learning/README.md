@@ -7,8 +7,8 @@ stanford computer vision:         systematic learning; theory
 
 Andrew Ng machine learning:       systematic; machine learning math
 
-stanford_deep_learning notes:     to be commented
-(https://stats385.github.io/)
+University notes:                 to be commented
+[stanford_deep_learning](https://stats385.github.io/)
 
 fastai:                           state-of-art; intuition; code heavy; project based (recommend have some background first)
 

@@ -56,3 +56,4 @@ https://arxiv.org/
 [chinese biggest computer community](https://www.csdn.net/) # problem solving
 
 
+computer science learning journey: teachyourselfcs.com? -- to be commented.

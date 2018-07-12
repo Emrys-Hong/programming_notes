@@ -77,7 +77,7 @@ wikipedia                         systematic; quick; problem based; resourceful 
 6. seriously compete in Kaggle
 7. apply machine learning proficiently
 *8. ways to teach others about machine learning:
-    Writing research papers
+    Writing research papers (replicating research papers is also a underappreciated way of learning).
     Giving talks
     Writing blog posts and tutorials
     Answering questions on Kaggle, Quora, and other sites
@@ -87,6 +87,8 @@ wikipedia                         systematic; quick; problem based; resourceful 
     Writing a book
 ```
 thoughts:
+    
     1. machine learning is really a big task, with a lot small subjects. so it is impossible and useless to learn all the subjects. but you can get a sense of some methods they use leveraging on the features of the dataset. so be project based and target based when learning. AND try to conclude your experience systematically.
+    
     2. can try to learn machine learning with the method recommended up there. and after that can try to open some companies using machine learning.
 

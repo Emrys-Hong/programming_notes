@@ -15,7 +15,7 @@ University notes:                 to be commented
 fastai:                           state-of-art; intuition; code heavy; project based (recommend have some background first)
 (course.fast.ai)
 (https://www.linkedin.com/pulse/fastai-intro-machine-learning-coders-part-1-2018-eric-perbos-brinck)
-
+(deep learning workshop: http://forums.fast.ai/t/wiki-thread-intro-workshop/6537)
 
 google machine learning:          to be commented
 

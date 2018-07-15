@@ -56,7 +56,7 @@ https://arxiv.org/
 [chinese biggest computer community](https://www.csdn.net/) # problem solving
 
 
-computer science learning journey: teachyourselfcs.com? -- to be commented.
+computer science learning journey: [teachyourselfcs](teachyourselfcs.com) [ossu](https://github.com/ossu/computer-science#advanced-programming) -- to be commented.
 
 google clean code talks, uc berkeley 61b:                                -- to be commented
 

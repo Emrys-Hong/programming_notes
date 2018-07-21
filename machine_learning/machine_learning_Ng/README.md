@@ -5,4 +5,4 @@ the homework take the answer from https://github.com/zzlyw/machine-learning-exer
 
 finally the MOOC -- [certificate url](https://www.coursera.org/account/accomplishments/verify/G8NCJPLBSRGX)
 
-![machine learning MOOC](https://github.com/Emrys-Hong/programming_notes/blob/master/machine_learning/machine_learning_Ng/MOOC.pdf)
+or can check for certificate [here](https://github.com/Emrys-Hong/programming_notes/blob/master/machine_learning/machine_learning_Ng/MOOC.pdf)

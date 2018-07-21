@@ -19,7 +19,7 @@ fastai:                           state-of-art; intuition; code heavy; project b
 
 google machine learning:          to be commented
 
-Andrew Ng deep learning:          to be commented
+Andrew Ng deep learning:          theory; familiarize with keras lib; project; classic; systematic; introduction to more papers
 
 intel machine learing             to be commented
 (https://software.intel.com/en-us/ai-academy/basics)

@@ -12,10 +12,12 @@ Andrew Ng machine learning:       systematic; machine learning math
 University notes:                 to be commented
 [stanford_deep_learning](https://stats385.github.io/)
 
-fastai:                           state-of-art; intuition; code heavy; project based (recommend have some background first)
-(course.fast.ai)
+fastai:                           state-of-art; intuition; code heavy; project based (recommend have some background first); news/ trends on machine learing; advices on learning machine learning; life as a machine learning practioner/ data scientist
+(www.fast.ai)
 (https://www.linkedin.com/pulse/fastai-intro-machine-learning-coders-part-1-2018-eric-perbos-brinck)
 (deep learning workshop: http://forums.fast.ai/t/wiki-thread-intro-workshop/6537)
+(http://forums.fast.ai/t/wiki-thread-intro-workshop/6537)
+or search machine learing workshop
 
 google machine learning:          to be commented
 

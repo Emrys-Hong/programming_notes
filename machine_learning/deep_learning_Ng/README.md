@@ -4,6 +4,7 @@
 
 or you can see [here](https://github.com/Emrys-Hong/programming_notes/blob/master/machine_learning/deep_learning_Ng/MOOC.pdf)
 
+I have not seen the machine learning heroes series and will finish them in the future, but i guess they are a good start for you to step into machine learning field.
 ### here are some suggestions for person who take this class:
 1. unlike machine learning classes given by Andrew, the homework for this class have great value. if you do not know how to do it, check the forum and you will know. (there are some other good resources on forum such as [how to use a debugger in ipynb](https://appletree.or.kr/quick_reference_cards/Python/Python%20Debugger%20Cheatsheet.pdf)
 (although it will take more time than check the answer, but do not waste the opportunity to get everything right by yourself and reading documents)

@@ -19,7 +19,9 @@ fastai:                           state-of-art; intuition; code heavy; project b
 (http://forums.fast.ai/t/wiki-thread-intro-workshop/6537)
 or search machine learing workshop
 
-google machine learning:          to be commented
+google machine learning in udacity:          to be commented
+(https://www.udacity.com/course/deep-learning--ud730)
+(https://www.udacity.com/nanodegree)
 
 Andrew Ng deep learning:          theory; familiarize with keras lib; project; classic; systematic; introduction to more papers
 

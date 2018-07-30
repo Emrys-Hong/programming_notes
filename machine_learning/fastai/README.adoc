@@ -1,1 +1,2 @@
-trying adoc
+## will be suitable if can learn some pytorch videos.
+one pytorch resources here. [morvan python](https://morvanzhou.github.io/)

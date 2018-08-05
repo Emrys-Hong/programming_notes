@@ -2,6 +2,11 @@ this is copied from hackjutsu
 # Vim Cheatsheet
 
 >Disclaimer: This cheatsheet is summarized from personal experience and other online tutorials. It should not be considered as an official advice.
+## handy comes first
+ctrl + ( # go to the definition of the function
+ctrl + t # go back
+
+*        # to jump to next place it is used
 
 ## Global
 ```bash

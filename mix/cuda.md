@@ -25,3 +25,6 @@ sess = tf.Session(graph=detection_graph, config=tfconfig)
 
 ### kill cuda session
 sudo kill -9 PID
+
+### get cuda version
+nvcc --version

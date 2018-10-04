@@ -1,3 +1,7 @@
+## sql is manipulating on rows, it is like a spreadsheet
+
+### action + table + (values) + where_clause
+```
 # create table
 CREATE TABLE Users(
  name VARCHAR(128),
@@ -6,8 +10,6 @@ CREATE TABLE Users(
 
 # insert values
 INSERT INTO Users (name, email) VALUES ('zihao', 'zihao@sutd.edu.sg')
-# insert a new row
-INSERT ROW
 
 # delete
 delete FROM Users WHERE email='abc@sutd.edu.sg'
@@ -25,3 +27,4 @@ SELECT * FROM Users ORDER BY email
 
 # count the rows in the table Users
 SELECT COUNT(*) FROM Users
+

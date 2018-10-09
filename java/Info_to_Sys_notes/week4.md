@@ -1,4 +1,4 @@
-#ISTD Info Sys programming week4
+# ISTD Info Sys programming week4
 
 ## abstract class
 only abstract method can be in abstract class. 
@@ -21,9 +21,13 @@ public class TestGeoObject {
 
 }
 ```
-In this example, GeoObject have the function getArea() but it is not implemented, so when executing the function, it will go down to find the correct implementation in the sub class. Therefore you can compare the area between Rectangle and Circle.
+In this example, GeoObject have the function getArea() but it is not implemented, 
+
+so when executing the function, it will go down to find the correct implementation in the sub class. 
+Therefore you can compare the area between Rectangle and Circle.
 
 for functions: it will consider the actual type first and then go up to the super class to find functions.
+
 for data field: it will consider the declared type only.
 
 one example that why we use abstract class
@@ -76,6 +80,9 @@ all the methods are public abstract.
 all the datafield is ```public static final```. (these modifiers are ok to be omitted.)
 
 there are no constructors.
+
+## java Framework
+![javaFramework](https://github.com/Emrys-Hong/programming_notes/blob/master/java/Info_to_Sys_notes/JavaCollectionFramework.png)
 
 ## comparable
 java definition, this is a generic interface, "E" is replaced by a datatype.
@@ -132,18 +139,18 @@ Collections.sort(l, new IntegerAbsComparator());
 ## Array
 the same concept as python list
 ```java
-public class Array2D {    
-	public static void main(String[] args) {        
-		int [][] a = new int[4][6];        
-		for (int i = 0; i < a.length; i++) {            
-			for (int j=0; j< a[i].length; j++) {                
-				a[i][j] = i+j;            
-			}        
+public class Array2D {   
+	public static void main(String[] args) {     
+		int [][] a = new int[4][6];     
+		for (int i = 0; i < a.length; i++) {          
+			for (int j=0; j< a[i].length; j++) {            
+				a[i][j] = i+j;
+			}    
 		}
-    }
+     }
 }
 ```
-use ``Arrays.deepToString(a)`` for printing.
+use ``Arrays.deepToString(a)`` for printing.
 
 ## recommend reading
 

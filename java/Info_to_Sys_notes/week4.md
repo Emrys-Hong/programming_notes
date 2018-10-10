@@ -81,6 +81,8 @@ all the datafield is ```public static final```. (these modifiers are ok to be om
 
 there are no constructors.
 
+interface extends interface (not implement).
+
 ## java Framework
 ![javaFramework](https://github.com/Emrys-Hong/programming_notes/blob/master/java/Info_to_Sys_notes/JavaCollectionFramework.png)
 

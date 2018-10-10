@@ -48,3 +48,4 @@ And it will always succeed.
 **Explicit** casting must be used when casting an object from a superclass to a subclass.  This type of casting may not always succeed.
 
 ## visibility modifier
+![modifier](https://github.com/Emrys-Hong/programming_notes/blob/master/java/Info_to_Sys_notes/VisibilityModifiers.png)

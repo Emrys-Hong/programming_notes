@@ -2,6 +2,12 @@
 
 ## array
 fixed size
+```java
+// copy only part of the array, equals to list[1:len(list)]
+Arrays.copyOfRange(S, 1, S.length-1);
+// fill array with a value
+Arrays.fill(sIn2_array, 0);
+```
 
 ## LinkedList
 
@@ -42,4 +48,61 @@ Iterator<String> iter = this.a.iterator();
 while (iter.hasNext()) {
     String s = iter.next();
 }
+```
+
+## String operations
+![String_operations](https://github.com/Emrys-Hong/programming_notes/blob/master/java/Info_to_Sys_notes/String_operations.png)
+### extra
+```java
+stringA.toCharArray();
+stringA.indexOf('substring');
+stringA.contains('substring');
+```
+
+## Character toString
+```java
+Character.toString(array1.get(0));
+```
+
+## down casting
+Object o = getSomeObject(),
+String s = (String) o; // this is allowed because o could reference a String
+
+## convert array, ArrayList, LinkedList types
+```java
+// LinkedList to array
+String[] array = linkedlist.toArray(new String[linkedlist.size()]);
+// array to LinkedList
+LinkedList<Integer> w = new LinkedList<Integer>(Arrays.asList(t));
+
+// array to ArrayList
+ArrayList<Integer> w = new ArrayList<Integer>(Arrays.asList(t));
+// ArrayList to array
+// stockList is a arraylist
+String[] stockArr = new String[stockList.size()];
+stockArr = stockList.toArray(stockArr);
+```
+
+## Hashmap
+```java
+HashMap<String(key), Integer(value)> map = new HashMap<>();
+map.put(value, idx);
+map.get(key);
+map.containsKey();
+map.containsValue();
+map.entrySet(); // dict.items()
+map.keySet(); // dict.keys()
+```
+
+## Character
+```java
+Character.isLetter(c)
+Character.isLowerCase(c)
+```
+
+## instance
+```
+instanceof tests whether the object reference on the left-hand side (LHS) is an instance of the type on the right-hand side (RHS) or some subtype.
+
+getClass() == ... tests whether the types are identical.
 ```

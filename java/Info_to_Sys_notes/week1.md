@@ -11,6 +11,8 @@ static method can only access both static variable.
 
 static method cannot be overriden.
 
+if you changes static variable or method in the class, it changes all the information in the instance as well.
+
 ## pointers( variables)
 to the primitive type can be "changed"
 

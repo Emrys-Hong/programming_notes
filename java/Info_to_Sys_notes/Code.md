@@ -5,8 +5,12 @@ fixed size
 ```java
 // copy only part of the array, equals to list[1:len(list)]
 Arrays.copyOfRange(S, 1, S.length-1);
+// copy the full array
+int[] b = a.clone();
 // fill array with a value
 Arrays.fill(sIn2_array, 0);
+// print the array
+System.out.println(Arrays.toString(a));
 ```
 
 ## LinkedList

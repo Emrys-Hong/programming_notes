@@ -106,3 +106,8 @@ instanceof tests whether the object reference on the left-hand side (LHS) is an 
 
 getClass() == ... tests whether the types are identical.
 ```
+
+## System time
+```java
+long start = new System.nanoTime();
+```

@@ -1,8 +1,12 @@
 # DPLL algorithm involves backtracking. 
 using dynamic algorithms: 
+
 copied from [JiaWeikhong](https://github.com/jiaweikhong/Term4_2D).
+
 more reference [kohJingyu](https://github.com/kohjingyu/Term4_2D).
+
 SUTD ISTD term4 2d, sat solver using java.
+
 time manage to solve the best case for Unsat large, around 8s on Mac.
 
 This is the rough schmetics for the 2D.

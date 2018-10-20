@@ -37,3 +37,4 @@ cat /usr/local/cuda/version.txt
 cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
 
 ### see tensorflow support version
+![cuda support version](https://github.com/Emrys-Hong/programming_notes/blob/master/mix/cuda/tensorflow_support_version.png)

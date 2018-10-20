@@ -18,6 +18,7 @@ sudo dpkg -i cuda-repo-ubuntu1704-9-0-local_9.0.176-1_amd64.deb
 sudo apt-key add /var/cuda-repo-9-0-local/7fa2af80.pub
 sudo apt-get update
 sudo apt-get install cuda
+(to download a specific version of cuda: sudo apt-get install cuda=9.0.176-1.)(from https://developer.nvidia.com/rdp/cudnn-archive)
 ```
 
 ## update path variable

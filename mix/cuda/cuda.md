@@ -28,3 +28,12 @@ sudo kill -9 PID
 
 ### get cuda version
 nvcc --version
+
+OR if this does not work:
+
+cat /usr/local/cuda/version.txt
+
+### CuDnn version
+cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
+
+### see tensorflow support version

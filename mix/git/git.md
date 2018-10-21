@@ -174,3 +174,6 @@ git stash               # your work space will be cleaned and nothing to commit
 git stash list          ## see what are stashes
 git stash pop           ## pop the first stash
 ```
+
+## remove all the files from .gitignore that has been cached
+```git rm --cached `git ls-files -i --exclude-from=.gitignore` ```

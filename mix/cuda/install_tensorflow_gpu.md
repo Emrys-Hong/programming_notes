@@ -8,9 +8,8 @@ sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt update
 sudo apt install nvidia-390
 ```
-to verify
-```nvidia-smi
-```
+to verify by using ```nvidia-smi```
+
 ## install cuda version 9.0 (with all patches)
 go to [cuda](https://developer.nvidia.com/cuda-90-download-archive) and download the toolkit for linux, x86_64, ubuntu, 16.04, deb
 ```

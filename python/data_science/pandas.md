@@ -1,5 +1,5 @@
-panda documentation
-https://pandas.pydata.org/pandas-docs/stable/10min.html
+Read [10mins panda tutorial](https://pandas.pydata.org/pandas-docs/stable/10min.html) for 10 mins for a general knowledge of pandas
+
 
 ## input/output data from excel
 ```
@@ -8,6 +8,7 @@ data = pd.read_csv('student.csv')
 
 # output data
 data.to_excel('path/to/excel')
+# set index=False to ignore index
 ```
 ## convert dataframe to dictionary and convert back
 ```
@@ -29,8 +30,9 @@ df = pd.concat([df1, df2], axis = 0) # default zero to let them concat along
 df.get_value(index, column)
 ```
 
-## drop row
+## drop row or column
 ```
 df.drop(['B', 'C'], axis=1)
+## inplace = True for inplace
 df.drop([0, 1])
 ```

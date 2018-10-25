@@ -1,4 +1,5 @@
 followed the tutorial from [morvan python git](https://morvanzhou.github.io/tutorials/others/git/)
+Useful [cheetsheet website](http://www.vogella.com/tutorials/Git/article.html)
 ## Set a new remote
 ```
 ## add new origin
@@ -177,3 +178,6 @@ git stash pop           ## pop the first stash
 
 ## remove all the files from .gitignore that has been cached
 ```git rm --cached 'git ls-files -i --exclude-from=.gitignore'```
+
+## git submodule
+http://www.vogella.com/tutorials/GitSubmodules/article.html

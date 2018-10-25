@@ -1,3 +1,0 @@
-how to find a nohup number and kill a nohup
-ps -ef |grep nohup
-kill -9 22182

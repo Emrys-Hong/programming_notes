@@ -53,17 +53,7 @@ melanierichards's repository [Just build Website](https://github.com/melanierich
 [python by Data science](https://www.edx.org/course/python-for-data-science-0)
 
 ## machine learning basics
-1. Computer Vision:
-
-[Georgia Tech](https://www.udacity.com/course/introduction-to-computer-vision--ud810)
-
-[Stanford Unversity cs231](https://www.youtube.com/results?search_query=stanford+cs231)
-
-1. Natural Language Processing:
-
-[text Mining Basics](https://www.coursera.org/learn/python-text-mining)
-
-[Stanford University cs224n](https://www.youtube.com/watch?v=OQQ-W_63UgQ&list=PL3FW7Lu3i5Jsnh1rnUwq_TcylNr7EkRe6)
+go to [machine learning repository](https://github.com/Emrys-Hong/machine_learning) for more info!
 
 1. Software Engineering Practices:
 [Software Development Processes and Methodologies](https://www.coursera.org/learn/software-processes) by University of Minnesota

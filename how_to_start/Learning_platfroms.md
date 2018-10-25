@@ -22,9 +22,11 @@ Jeff Dean, Paul Allen , Tim Berners-Lee, Linus Torvalds, Brendan Eich, John Carm
 
 ## computer science communities
 
-### Chinese community
+### Chinese communities
 [CSDN community](https://www.csdn.net/)
 [极客学院](http://wiki.jikexueyuan.com/)
+
+### English website
 
 ## Open Source:
 [free programming books]
@@ -35,3 +37,11 @@ Jeff Dean, Paul Allen , Tim Berners-Lee, Linus Torvalds, Brendan Eich, John Carm
 
 [hacker news](https://news.ycombinator.com/)
 
+
+## Coding Interview Practise websites
+[Hacker rank](https://www.hackerrank.com/dashboard)
+
+[Leetcode](https://leetcode.com/)
+
+Comparison between leetcode and hacker rank: [quora](https://www.quora.com/Which-one-is-better-HackerRank-or-LeetCode), 
+[youtube](https://www.youtube.com/watch?v=J267bz_G7xE)

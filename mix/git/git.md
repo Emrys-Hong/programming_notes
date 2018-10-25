@@ -1,5 +1,10 @@
-followed the tutorial from [morvan python git](https://morvanzhou.github.io/tutorials/others/git/)
+## Resources
+English tutorial from [Corey Schafer](https://www.youtube.com/watch?v=HVsySz-h9r4&t=1093s)
+
+Chinese tutorial from [morvan python git](https://morvanzhou.github.io/tutorials/others/git/)
+
 Useful [cheetsheet website](http://www.vogella.com/tutorials/Git/article.html)
+
 ## Set a new remote
 ```
 ## add new origin
@@ -14,14 +19,14 @@ git push -u origin master
 ## Verify new remote
 ```
 git remote -v
-```
+
+outputs:
 origin  https://github.com/user/repo.git (fetch)
 origin  https://github.com/user/repo.git (push)
+```
+git remote add origin <github_url>
 
-git remote add origin https://github.com/octocat/Spoon-Knife
-fatal: remote origin already exists.
-
-for more documentation
+for more documentation:
 http://www.ruanyifeng.com/blog/2014/06/git_remote.html
 
 ## first time git setup

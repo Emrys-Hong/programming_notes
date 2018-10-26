@@ -70,7 +70,7 @@ git commit -m "some comments here"
 OR for shorter commands
 git commit -am "some comments here"         # this one must have the files already added and modified
 ```
-![git flow pipline](https://github.com/Emrys-Hong/programming_notes/blob/master/mix/git/pipline.png)
+![git flow pipline](https://github.com/Emrys-Hong/programming_notes/blob/master/efficiency_utilities/git/pipline.png)
 
 ## git log
 ```
@@ -132,10 +132,10 @@ git reset --hard HEAD@{3}
 git checkout <commit_id> -- 1.py          # remember the space between -- and 1.py
 #######
 ```
-![reset-1](https://github.com/Emrys-Hong/programming_notes/blob/master/mix/git/reset-1.png)
-![reset-2](https://github.com/Emrys-Hong/programming_notes/blob/master/mix/git/reset-2.png)
-![reset-3](https://github.com/Emrys-Hong/programming_notes/blob/master/mix/git/reset-3.png)
-![reset-4](https://github.com/Emrys-Hong/programming_notes/blob/master/mix/git/reset-4.png)
+![reset-1](https://github.com/Emrys-Hong/programming_notes/blob/master/efficiency_utilities/git/reset-1.png)
+![reset-2](https://github.com/Emrys-Hong/programming_notes/blob/master/efficiency_utilities/git/reset-2.png)
+![reset-3](https://github.com/Emrys-Hong/programming_notes/blob/master/efficiency_utilities/git/reset-3.png)
+![reset-4](https://github.com/Emrys-Hong/programming_notes/blob/master/efficiency_utilities/git/reset-4.png)
 
 ## git branch
 ```
@@ -186,11 +186,11 @@ solved the conflicts in 1.py
 git add <conflict_file>
 git rebase --continue
 ```
-![rebase-1](https://github.com/Emrys-Hong/programming_notes/blob/master/mix/git/rebase-1.png)
-![rebase-2](https://github.com/Emrys-Hong/programming_notes/blob/master/mix/git/rebase-2.png)
-![rebase-3](https://github.com/Emrys-Hong/programming_notes/blob/master/mix/git/rebase-3.png)
-![rebase-4](https://github.com/Emrys-Hong/programming_notes/blob/master/mix/git/rebase-4.png)
-![rebase-5](https://github.com/Emrys-Hong/programming_notes/blob/master/mix/git/rebase-5.png)
+![rebase-1](https://github.com/Emrys-Hong/programming_notes/blob/master/efficiency_utilities/git/rebase-1.png)
+![rebase-2](https://github.com/Emrys-Hong/programming_notes/blob/master/efficiency_utilities/git/rebase-2.png)
+![rebase-3](https://github.com/Emrys-Hong/programming_notes/blob/master/efficiency_utilities/git/rebase-3.png)
+![rebase-4](https://github.com/Emrys-Hong/programming_notes/blob/master/efficiency_utilities/git/rebase-4.png)
+![rebase-5](https://github.com/Emrys-Hong/programming_notes/blob/master/efficiency_utilities/git/rebase-5.png)
 
 
 ## git stash

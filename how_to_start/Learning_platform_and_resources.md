@@ -5,9 +5,12 @@ learning Platforms
 ## Reddit
 
 ## Twitter(Introduction to be add)
+### computer science
 Jeff Dean, Paul Allen , Tim Berners-Lee, Linus Torvalds, Brendan Eich, John Carmack
-
+### machine learning
 ## online learning platforms
+credits to youtuber Corey Schafer's [CS career advice playlist](https://www.youtube.com/playlist?list=PL-osiE80TeTvviVL0pJGX5mZCo7CAvIuf)
+
 - [Lynda](https://www.lynda.com/), 
 - [tree house](https://teamtreehouse.com/library), 
 - [Edx](https://www.edx.org/),

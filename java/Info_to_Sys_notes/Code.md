@@ -55,7 +55,7 @@ while (iter.hasNext()) {
 ```
 
 ## String operations
-![String_operations](https://github.com/Emrys-Hong/programming_notes/blob/master/java/Info_to_Sys_notes/String_operations.png)
+![String_operations](https://github.com/Emrys-Hong/programming_notes/blob/master/java/Info_to_Sys_notes/String_operation.png)
 ### extra
 ```java
 stringA.toCharArray();

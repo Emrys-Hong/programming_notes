@@ -24,7 +24,7 @@ Adanced Topics: One of the most important concepts of python
 
 - [MIT courses 6.006](https://courses.csail.mit.edu/6.006/fall11/notes.shtml)
 
-- [Introduction to Algorithm](https://labs.xjtudlc.com/labs/wldmt/reading%20list/books/Algorithms%20and%20optimization/Introduction%20to%20Algorithms.pdf)
+- [Introduction to Algorithm](https://labs.xjtudlc.com/labs/wldmt/reading%20list/books/Algorithms%20and%20optimization/Introduction%20to%20Algorithms.pdf) [Answer](https://github.com/gzc/CLRS)
 
 Recommend Reading: This is also  the recommended reading book for ISTD Intro to algorithm in Term4.
 
@@ -71,3 +71,11 @@ for IT support: This course is very pro. covers from basic data layer to http pr
 - Basic: [Java Video tutorial](https://www.youtube.com/watch?v=TBWX97e1E9g&list=PLE7E8B7F4856C9B19) by Derek Banas
 
 - Advanced: [Java Design Patterns](https://www.youtube.com/watch?v=vNHpsC5ng_E&list=PLF206E906175C7E07) by Derek Banas
+
+- [MIT notes](:
+https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-092-introduction-to-programming-in-java-january-iap-2010/lecture-notes/
+) on Java programming
+
+- [Intro to Java programming comprehensive version](:
+https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-092-introduction-to-programming-in-java-january-iap-2010/lecture-notes/
+). This the recommended reading for ISTD term4 Introduction to Information System. Get the [answer](https://github.com/jsquared21/Intro-to-Java-Programming).

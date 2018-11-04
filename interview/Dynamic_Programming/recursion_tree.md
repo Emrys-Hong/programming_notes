@@ -1,6 +1,8 @@
 ## problems in common:
-you have a function that adds up to a certain amount
-you have some choices from a list, they can be reused or not reused.
+1. you have a function that adds up to a certain amount
+1. you have some choices from a list, they can be reused or not reused.
+1. these will normally let you list all the possibility, and therefore it will require to take O(2^n) time to solve it
+2. using the memoized solution can relieve the solution.
 ## strategy
 sort the give list first, and try small first, if it exceeds then ignore it.
 
@@ -8,7 +10,7 @@ sort the give list first, and try small first, if it exceeds then ignore it.
 find change adding up to a certain amount
 this code is to give a array A, and int x, to give all the possible subset in the given array A that adds up to x.
 
-after using the memorized function, the computation time goes from 2^n to O(x*len(A)). as there will be x*len(A) possible times to compute these function.
+after using the memoized function, the computation time goes from 2^n to O(x*len(A)). as there will be x*len(A) possible times to compute these function.
 [video explanation](https://www.youtube.com/watch?v=nqlNzOcnCfs)
 ```python
 ## we assume the arr is sorted 
@@ -17,7 +19,7 @@ def count_sets_dp(arr, total):
     mem = {}
     return dp(arr, total, len(arr)-1, mem)
 
-## classic answer using meomorized method to solve this function
+## classic answer using meomoized method to solve this function
 ## we assume the array is sorted
 def dp(arr, total, i, mem):
     key = str(total) + ':' + str(i)

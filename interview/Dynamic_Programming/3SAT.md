@@ -3,7 +3,7 @@
 This question generally uses the dynamic programming. and there are some levels checking whether a clause is satisfiable or not. similar like this question. it is like:
 1. first, try the first function if fail it calls the second choice.
 1. try the second function. if also fail return false
-1. this function usually have if statement as recursion.
+1. this function usually have recursion in the if statement.
 ## solution for sat
 
 ```java

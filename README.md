@@ -73,7 +73,7 @@ Java Design pattern and their examples
 - [Info Sys notes](https://github.com/Emrys-Hong/programming_notes/tree/master/java/Info_to_Sys_notes)
 Notes to Introduction to Infomation System for Term4 ISTD.
 
-### [Andriod]
+### Andriod
 - [Andriod Developer Fundamental version2 Overview](https://developer.android.com/courses/fundamentals-training/overview-v2)| [Andriod Developer Fundamental version2 concepts](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/index.html)
 - [Andriod Developer Fundamental version1](https://developer.android.com/courses/fundamentals-training/overview) for sql
 

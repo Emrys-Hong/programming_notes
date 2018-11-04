@@ -45,7 +45,17 @@ benefit of LinkedList<E>
 
 ![common_operations](https://github.com/Emrys-Hong/programming_notes/blob/master/java/Info_to_Sys_notes/LinkedList_operations.png)
 
-## iter
+## Collections [reference here](http://www.ntu.edu.sg/home/ehchua/programming/java/j5c_collection.html#zz-8.2)
+```java
+// sorting
+Collections.sort()
+// binary search. the list must be sorted
+Collections.binarySearch()
+// min and max
+Collections.max()
+Collections.min()
+```
+## Iter
 ```java
 Iterator<String> iter = this.a.iterator();
 

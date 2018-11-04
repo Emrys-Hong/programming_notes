@@ -6,12 +6,38 @@ sort the give list first, and try small first, if it exceeds then ignore it.
 
 ## change count
 find change adding up to a certain amount
-this code is to solve give a number n, to give all the possible combinations in the given list
-my analysis is that if build every possible list, the computational time becomes intractable, as the computational time will increase exponentially with the # of items in the list
-if n is small enough then i will have enough time
-```python
-from copy import deepcopy
+this code is to give a array A, and int x, to give all the possible subset in the given array A that adds up to x.
 
+after using the memorized function, the computation time goes from 2^n to O(x*len(A)). as there will be x*len(A) possible times to compute these function.
+[video explanation](https://www.youtube.com/watch?v=nqlNzOcnCfs)
+```python
+## we assume the arr is sorted 
+## we consider the array from small to big
+def count_sets_dp(arr, total):
+    mem = {}
+    return dp(arr, total, len(arr)-1, mem)
+
+## classic answer using meomorized method to solve this function
+## we assume the array is sorted
+def dp(arr, total, i, mem):
+    key = str(total) + ':' + str(i)
+    if key in mem:
+        return mem[key]
+    if total == 0:
+        return 1 # can return an output of nothing
+    else if total < 0:
+        return 0
+    else if i < 0:
+        return 0
+    else if total < arr[i]:
+        to_return = dp(arr, total, i-1, mem)
+    else:
+        to_return = dp(arr, total, i-1, mem) + dp(arr, total-arr[i], i-1, mem)
+    mem[key] = to_return
+    return to_return
+
+## my ans
+from copy import deepcopy
 def recursion(input_list,n):
     min_list = [item for item in input_list if item <= n]
     output_list = []
@@ -28,25 +54,6 @@ def recursion(input_list,n):
                     j.append(i)
                     output_list.append(j)
     return output_list
-
-
-#below is another function
-def all_combinations(total_list):
-    mylist = [[]]
-    for i in total_list:
-        mylist_temp = deepcopy(mylist)
-        for j in mylist_temp:
-            j.append(i)
-        mylist += mylist_temp
-    return mylist
-def list_filter(mylist,n):
-    return [i for i in mylist if sum(i) == n]
-
-
-#
-testlist = [1,2,3,4,5,6,7,8,9,10,1,2,3,3,4,5,6,76,90,23,43,56,4,34,3]
-print(recursion(testlist,10))
-print(list_filter(all_combinations(testlist),10))
 ```
 ## change count
 ### problem description:

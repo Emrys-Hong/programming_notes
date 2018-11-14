@@ -305,7 +305,8 @@ if​( intent.resolveActivity(getPackageManager()) != ​null​){
 ```
 For other intents, see [here](https://developer.android.com/guide/components/intents-common)
 
-## Unit Test with JUnit4
+## Test
+### Unit Test with JUnit4
 - Testing the parts that don’t involve the UI ​(easy)​​: ​unit testing
 - Testing the parts that involve the UI (hard): ​instrumented testing
 
@@ -322,6 +323,32 @@ public​ ​void​ ​exchangeRate_Infinity​() {
 }
 ```
 
+### Instrumented Test with Expresso
+This helps user interaction with the app and see if the result is correct.
+
+- Ensure that your widgets have certain properties.
+- Carry out some action on your widgets
+
+General formula for checking
+```java
+onView ( ​ViewMatcher​​ ).check( ​ViewAssertion​​ )
+```
+Examples
+```java
+@Test
+public​ ​void​ ​exchangeRateZero​(){ onView(withId(R.id.buttonSetExchangeRate)).perform(click());
+}
+
+@Test
+public void enterValueAndConvert() {
+    onView(withId(R.id.editTextValue))
+            .perform(replaceText("100"));
+    onView(withId(R.id.buttonConvert))
+            .perform(click());
+    onView(withId(R.id.textViewResult))
+            .check(matches(withText("295.0")));
+}
+```
 ### Examples
 menu layout
 ```java

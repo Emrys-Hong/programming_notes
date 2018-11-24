@@ -12,5 +12,7 @@ e.g. try to explain the psuedo code the the interviewer.
 e.g. Will there be any positive numbers
 
 ## learning resources
-- [Cracking the code interview Book](https://inspirit.net.in/books/placements/Cracking%20the%20Coding%20Interview.pdf) | [Answer](https://github.com/careercup/CtCI-6th-Edition) by Gayle Laakmann McDowell.
-- [11 essential coding quesitons](https://github.com/Emrys-Hong/programming_notes/tree/master/interview/11-interview-questions)| [Udemy course](https://www.udemy.com/11-essential-coding-interview-questions/learn/v4/content) by Dojo. This is beginner level. and covers less about recursion and etc.
+- Book -- [Cracking the code interview Book](https://inspirit.net.in/books/placements/Cracking%20the%20Coding%20Interview.pdf) | [Answer](https://github.com/careercup/CtCI-6th-Edition) by Gayle Laakmann McDowell.
+- Course -- [11 essential coding quesitons](https://github.com/Emrys-Hong/programming_notes/tree/master/interview/11-interview-questions)| [Udemy course](https://www.udemy.com/11-essential-coding-interview-questions/learn/v4/content) by Dojo. This is beginner level. and covers less about recursion and etc.
+- Youtube channel [GeeksforGeeks](https://www.youtube.com/channel/UC0RhatS1pyxInC00YKjjBqQ)
+- Youtube channel [Tushar Roy](https://www.youtube.com/user/tusharroy2525)

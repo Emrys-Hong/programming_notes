@@ -61,7 +61,7 @@ public​ ​class​ ​Tea​ { ​
     }
 }
 ```
-[Toast](Andriod-lesson2.md##Toast)
+[Toast](Android-lesson2.md##Toast)
 1. The Toast class constructor is actually public. It is used when you want to customize
 the design of your toast.
 
@@ -107,7 +107,7 @@ The builder is then used as follows:
 ```java
 TeaTwo teaTwo = ​new TeaTwo.TeaBuilder().setSugar(​true​).setMilk(​true​).build();
 ```
-[Build URI](Android-lesson2##Implict\nIntent)
+[Build URI](Android-lesson2.md##Implict\nIntent)
 
 ## static nested classes
 By declaring a nested class as static, it is known as a ​static nested class.

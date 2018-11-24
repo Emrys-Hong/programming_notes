@@ -16,6 +16,7 @@ The running time of this algorithm grows exponentially with n.
 With memoization, we need to instantiate a hashtable to store all the values we calculated so we dont need to calculate them again.
 
 It must be a hashtable as find the key will only take O(1) time.
+Top down:
 ```python
 def fib(n, memo):
     fib.count += 1
@@ -33,16 +34,30 @@ def fibn(n):
     fib.count = 0
     return fib(n, memo), fib.count
 ```
+Bottoms Up:
+```py
+def fib(n):
+    memo = {1:1, 2:1}
+    for i in range(3, n+1):
+        memo[i] = memo[(i-2)] + memo[(i-1)]
+    return memo[n]
+```
 Time complexity: 
 The time complexity is O(n).
 ![fibo](Images/fibo2.png)
-
 
 ## Analyze
 1. We only need to calculate what is stored in the table, and the complexity = O(table_size). and the table size is O(n).
 2. Without memo, we need to calculate tree structure. but with memo, we can calculate linear structure
 ![memo](Images/memo1.png)
 
+## Top down approach and bottoms up approach
+Theoretically, all of them should be the same, but bottoms up approach:
+1. practically runs faster
+2. can save space(just remember last 2 values)=> O(1) space.
+
+The sequence of executing each subproblem is DAG structure.
+![DAG](Images/DAG.png)
 
 # Factorial
 But trying memoization method on factorial does not give any improvement as it is does not contain any trees. Therefore it is not dynamic programming (although it uses recursion)

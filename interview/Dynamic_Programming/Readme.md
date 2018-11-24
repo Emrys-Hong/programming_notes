@@ -15,10 +15,10 @@ The solution to a problem can be obtained by solutions to sub-problems with no c
 A recursive solution contains a "small" number of distinct sub-problems (repeated many times), so it can solve each subproblem just once.
 
 ## Steps of dynamic programming
-1. Characterize the structure of an optimal solution. (Including Define sub-problems; What are the variables passed in the subsolution)
-2. Recursively define the value of an optimal solution. (Think how subproblems can be combined together to get bigger problems)
+1. Characterize the structure of an optimal solution. (Including Define how to split sub-problems(what is the space of subproblem -- what subsubproblem is included in this subproblem) & how should subproblem be like)
+2. Recursively define the value of an optimal solution. (Think how subproblems can be combined together to get bigger problems & What are the variables passed in the subsolution)
 3. Compute the value of an optimal solution, typically in a bottoms up fashion. (Guess part of the solution (initial condition), as well as the final answer)
-4. Construct an optimal solution from computed information (Including: Recursion plus memoize & Algorithm run time analyzes)
+4. Construct an optimal solution from computed information (Including: Recursion plus memoize & Algorithm run time analyzes). The time take is usually O(number_of_subproblems * #choicesForEachProblem)
 
 ## FAQ
 1. recursion is dynamic programming?

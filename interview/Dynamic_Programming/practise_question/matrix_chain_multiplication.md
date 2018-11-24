@@ -7,7 +7,7 @@ For example, you have A:(2,3), B:(3,6), C:(6,4), D(4,5), To calculate their resu
 1. initialize a square matrix T of size (len(numOfMatrix)), later only have of the matrix will be filled.
 2. use the formula:
 ```python
-T[i][j] = min{ T[i][k] + T[k][j] + matrixI.first + matrixI.second + matrixK.second) # add the second value to bind them together
+T[i][j] = min{ T[i][k] + T[k][j] + matrixI.first * matrixI.second * matrixK.second} # add the second value to bind them together
 ```
 we also note down the path along the way. 
 
@@ -15,6 +15,10 @@ for example:
 from 1 to 4 the best path is ((1,2)(3,4))
 3. When decode, we use the smallest value traced from the log to back decode.
 
+![matrix_chain_mulitiplication](Images/matrix_chain_mulitiplication.png)
+
+## Time complexity
+O(n^3)
 
 ### reference
 [Tushar Roy dynamic programming series](https://www.youtube.com/watch?v=vgLJZMUfnsU&index=3&list=PLrmLmBdmIlpsHaNTPP_jHHDx_os9ItYXr)

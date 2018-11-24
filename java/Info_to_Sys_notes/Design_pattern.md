@@ -33,7 +33,7 @@ class​ ​GourmetCoffee​ ​extends​ ​CaffeineBeverage​{ ​
     }
 }
 ```
-[AsyncTasks using template method](Android-lesson3.md##AsyncTasks)
+[AsyncTasks using template method](Android-lesson3.md#asynctasks)
 
 ## static factory method
 
@@ -61,7 +61,7 @@ public​ ​class​ ​Tea​ { ​
     }
 }
 ```
-[Toast](Android-lesson2.md##Toast)
+[Toast](Android-lesson2.md#toast)
 1. The Toast class constructor is actually public. It is used when you want to customize
 the design of your toast.
 
@@ -107,7 +107,7 @@ The builder is then used as follows:
 ```java
 TeaTwo teaTwo = ​new TeaTwo.TeaBuilder().setSugar(​true​).setMilk(​true​).build();
 ```
-[Build URI](Android-lesson2.md##Implict\nIntent)
+[Build URI](Android-lesson2.md#implict-intent)
 
 ## static nested classes
 By declaring a nested class as static, it is known as a ​static nested class.
@@ -156,7 +156,7 @@ public​ ​class​ ​OuterClassExample3​ {
 ```
 
 A lot of classes in Android is implemented like this:
-For example: [SharedPreferences.Editor](Android-lesson2.md###Data\npersistence\nwith\nSharedPereferences)
+For example: [SharedPreferences.Editor](Android-lesson2.md#Data-persistence-with-SharedPereferences)
 
 ## static nested classes
 By declaring a nested class as static, it is known as a static nested class.
@@ -187,4 +187,4 @@ public class Singleton{
 }
 ```
 
-[Database](Android-lesson4.md##\nCreate\nConstructor\nfor\ndatabase)
+[Database](Android-lesson4.md#create-constructor-for-database)

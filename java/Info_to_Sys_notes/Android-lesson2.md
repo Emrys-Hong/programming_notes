@@ -1,69 +1,4 @@
-## static factory method
 
-A ​static factory method​​ is a __static__ method in a class definition
-that returns an instance of that class. (​Attention: this is not the factory design pattern)​ .
-
-Advantage:
-1. You can overload your constructor to initialize your class with different states, but you are constrained by Java to have the same name for all constructors.
-1. On the other hand, you can give your static factory method meaningful names to describe what you are doing.
-
-(We want to strict first, and then release, it is easier)
-```java
-public​ ​class​ ​Tea​ { ​
-    private​ ​boolean​ sugar;
-​    private​ ​boolean​ milk;
-    Tea(​boolean​ sugar, ​boolean​ milk){ ​
-        this​.sugar = sugar;
-​        this​.milk = milk; 
-    }
-​    public​ ​static​ Tea ​teh​(){
-​        return​ ​new​ Tea(​true​, ​true​); 
-    }
-​    public​ ​static​ Tea ​tehkosong​(){
-​        return​ ​new​ Tea(​false​, ​true​ ); 
-    }
-}
-```
-
-## builder Design pattern
-static method usually make us to implement a constructors if there is a lot of argument.
-We may solve this problem by introducing a ​static nested class​​, usually called a b​ uilder class​​ that has
-- methods to allow the user to specify the options one by one
-- One method that returns the actual object
-  
-you should take the constructors private
-
-for example:
-```java
-public​ ​class​ ​TeaTwo​ { ​
-    private​ ​boolean​ sugar; ​
-    private​ ​boolean​ milk;
-    TeaTwo(TeaBuilder teaBuilder){ ​
-        this​.sugar = teaBuilder.sugar;
-​        this​.milk = teaBuilder.milk; 
-    }
-​    static​ ​class​ ​TeaBuilder​{ ​
-        private​ ​boolean​ sugar; ​
-        private​ ​boolean​ milk;
-        TeaBuilder(){}
-​        public​ TeaBuilder ​setSugar​(​boolean​ sugar){ ​
-            this​.sugar = sugar;
-​            return this;​ 
-        }
-​        public​ TeaBuilder ​setMilk​(​boolean​ milk){ ​
-            this​.milk = milk;
-​            return this;​
-        }
-​        public​ TeaTwo ​build​(){
-​            return​ ​new​ TeaTwo(​this​); 
-        }
-    } 
-}
-```
-The builder is then used as follows:
-```java
-TeaTwo teaTwo = ​new TeaTwo.TeaBuilder().setSugar(​true​).setMilk(​true​).build();
-```
 
 ## Exception
 
@@ -188,7 +123,7 @@ double value = intent.getDoubleExtra(subActivity.KEY, defaultValue);
 ```
 
 ## Andriod Activity lifecycle
-![lifeCycle](lifeCycle.png)
+![lifeCycle](Images/lifeCycle.png)
 
 rewrite the arguments
 ```java
@@ -198,7 +133,7 @@ protected void onResume() {
     Log.i(TAG, "onResume() is created");
 }
 ```
-### Data persistence with SharedPereferences.
+### Data persistence with SharedPereferences
 rewriting onPause() When closing the app.
 ```java
 
@@ -349,8 +284,9 @@ public void enterValueAndConvert() {
             .check(matches(withText("295.0")));
 }
 ```
-### Examples
-menu layout
+
+
+### Menu layout
 ```java
 @Override
 public boolean onOptionsItemSelected(MenuItem item) {

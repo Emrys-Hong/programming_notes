@@ -16,4 +16,4 @@ try {
    // Catch block, big exception.
 }
 ```
-![Exception](https://github.com/Emrys-Hong/programming_notes/blob/master/java/Info_to_Sys_notes/Exception.png)
+![Exception](Images/Exception.png)

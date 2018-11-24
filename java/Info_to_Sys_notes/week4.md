@@ -84,7 +84,7 @@ there are no constructors.
 interface extends interface (not implement).
 
 ## java Framework
-![javaFramework](https://github.com/Emrys-Hong/programming_notes/blob/master/java/Info_to_Sys_notes/JavaCollectionFramework.png)
+![javaFramework](Images/JavaCollectionFramework.png)
 
 ## comparable
 java definition, this is a generic interface, "E" is replaced by a datatype.

@@ -43,7 +43,7 @@ benefit of LinkedList<E>
 
 ```ListIterator.add(E element)``` is O(n) (with n/2 steps on average)
 
-![common_operations](https://github.com/Emrys-Hong/programming_notes/blob/master/java/Info_to_Sys_notes/LinkedList_operations.png)
+![common_operations](Images/LinkedList_operations.png)
 
 ## Collections [reference here](http://www.ntu.edu.sg/home/ehchua/programming/java/j5c_collection.html#zz-8.2)
 ```java
@@ -65,7 +65,7 @@ while (iter.hasNext()) {
 ```
 
 ## String operations
-![String_operations](https://github.com/Emrys-Hong/programming_notes/blob/master/java/Info_to_Sys_notes/String_operation.png)
+![String_operations](Images/String_operation.png)
 ### extra
 ```java
 stringA.toCharArray();

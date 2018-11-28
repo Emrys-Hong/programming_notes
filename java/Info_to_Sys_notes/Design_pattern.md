@@ -188,3 +188,127 @@ public class Singleton{
 ```
 
 [Database](Android-lesson4.md#create-constructor-for-database)
+
+## Strategy Design pattern
+In the strategy design pattern, parts of the behaviours of an object is handed over to other objects. This is known as​ **delegation​​**.
+This provides flexibility at run-time as you can change those behaviours.
+
+```java
+public​ ​abstract​ ​class​ ​Duck​ {
+   private FlyBehavior flyBehavior;
+   private QuackBehavior quackBehavior;
+   String name;
+    ​public​ ​Duck​(){ }
+    ​public​ ​Duck​(String name){
+    ​   this​.name = name; 
+    }
+    ​public​ ​void​ ​setFlyBehavior​(FlyBehavior flyBehavior) {
+    ​   this​.flyBehavior = flyBehavior; 
+    }
+    ​public​ ​void​ ​setQuackBehavior​(QuackBehavior quackBehavior) {
+    ​   this​.quackBehavior = quackBehavior; 
+    }
+    ​public​ ​void​ ​performFly​(){ 
+        flyBehavior.fly();
+    }
+    ​public​ ​void​ ​performQuack​(){ 
+        quackBehavior.quack();
+    }
+    ​public​ ​abstract​ ​void​ ​display​(); 
+}
+```
+```java
+interface​ ​FlyBehavior​ {
+​   void​ ​fly​(); 
+}
+class​ ​FlapWings​ ​implements​ ​FlyBehavior​ { ​
+    @Override
+    ​public​ ​void​ ​fly​() {
+        System.out.println(​"Flapping my Wings"​); 
+    }
+}
+
+public​ ​class​ ​LoudQuack​ ​implements​ ​QuackBehavior​ { ​
+    @Override
+    ​public​ ​void​ ​quack​() {
+        System.out.println(​"QUACK"​); 
+    }
+}
+
+public​ ​class​ ​MallardDuck​ ​extends​ ​Duck​ {
+    MallardDuck(String name){
+    ​   super​(name); 
+    }
+    ​@Override
+    ​public​ ​void​ ​display​() {
+        System.out.println(​"I am "​ + name + ​", the Mallard Duck"​); 
+    }
+}
+
+public​ ​class​ ​TestDuck​ {
+    ​public​ ​static​ ​void​ ​main​(String[] args){
+        Duck duck = ​new​ MallardDuck(​"Donald"​); 
+        duck.setFlyBehavior(​new​ FlapWings()); 
+        duck.setQuackBehavior(​new​ LoudQuack()); 
+        duck.display();
+        duck.performFly();
+        duck.performQuack();
+    }
+}
+```
+## Adapter Design pattern
+```java
+public​ ​interface​ ​Duck​ { ​
+    void​ ​quack​();
+​    void​ ​fly​(); 
+}
+
+public​ ​class​ ​MallardDuck​ ​implements​ ​Duck​ { ​
+    @Override
+    ​public​ ​void​ ​quack​() {
+        System.out.println(​"Mallard Duck says Quack"​); 
+    }
+    ​@Override
+    ​public​ ​void​ ​fly​() {
+        System.out.println(​"Mallard Duck is flying"​); 
+    }
+}
+
+// Duck is need here is need there
+import​ java.util.ArrayList; public​ ​class​ ​DuckClient​ {
+    ​static​ ArrayList<Duck> myDucks;
+    ​public​ ​static​ ​void​ ​main​(String[] args){ 
+        myDucks = ​new​ ArrayList<>(); 
+        myDucks.add( ​new​ MallardDuck()); 
+        makeDucksFlyQuack();
+    }
+    ​static​ ​void​ ​makeDucksFlyQuack​(){ ​
+        for​(Duck duck: myDucks){
+            duck.fly()
+            duck.quack()
+        } 
+    }
+}
+
+// We have a Turkey method that we want to pass to the same client above
+public​ ​interface​ ​Turkey​ {
+​   public​ ​void​ ​gobble​();
+​   public​ ​void​ ​fly​(); 
+}
+
+// Turkey adpter is a Duck class now.
+public​ ​class​ ​TurkeyAdapter​ ​implements​ ​Duck​ {
+    Turkey turkey;
+    TurkeyAdapter(Turkey turkey){ ​
+        this​.turkey = turkey;
+    }
+    ​@Override
+    ​public​ ​void​ ​quack​() {
+    ​   //implement this 
+    }
+    ​@Override
+    ​public​ ​void​ ​fly​() {
+    ​   //implement this 
+    }
+}
+```

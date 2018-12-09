@@ -312,3 +312,24 @@ public​ ​class​ ​TurkeyAdapter​ ​implements​ ​Duck​ {
     }
 }
 ```
+
+
+## Singleton Design Pattern
+singleton design pattern only allow one instance of the class to exist.
+This is done by:
+- Making the constructor private
+- The sole instance is stored in a private static variable
+- Using a static factory method to return an instance
+```java
+public class Singleton {
+    private static Singleton singleton;
+    priavte Singleton() {   
+    }
+    public Singleton getInstance() {
+        if (singleton == null) {
+            singleton = new Singleton();
+        }
+        
+        return Singleton;
+    }
+}

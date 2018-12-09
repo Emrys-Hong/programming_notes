@@ -195,9 +195,9 @@ This provides flexibility at run-time as you can change those behaviours.
 
 ```java
 public​ ​abstract​ ​class​ ​Duck​ {
-   private FlyBehavior flyBehavior;
-   private QuackBehavior quackBehavior;
-   String name;
+    private FlyBehavior flyBehavior;
+    private QuackBehavior quackBehavior;
+    String name;
     ​public​ ​Duck​(){ }
     ​public​ ​Duck​(String name){
     ​   this​.name = name; 
@@ -218,7 +218,7 @@ public​ ​abstract​ ​class​ ​Duck​ {
 }
 ```
 ```java
-interface​ ​FlyBehavior​ {
+public interface FlyBehavior​ {
 ​   void​ ​fly​(); 
 }
 class​ ​FlapWings​ ​implements​ ​FlyBehavior​ { ​
@@ -227,15 +227,17 @@ class​ ​FlapWings​ ​implements​ ​FlyBehavior​ { ​
         System.out.println(​"Flapping my Wings"​); 
     }
 }
-
-public​ ​class​ ​LoudQuack​ ​implements​ ​QuackBehavior​ { ​
+public interface QuackBehavior {
+    void quack();
+}
+public​ ​class LoudQuack​ ​implements QuackBehavior { ​
     @Override
     ​public​ ​void​ ​quack​() {
         System.out.println(​"QUACK"​); 
     }
 }
 
-public​ ​class​ ​MallardDuck​ ​extends​ ​Duck​ {
+public​ ​class MallardDuck​ ​extends​ ​Duck​ {
     MallardDuck(String name){
     ​   super​(name); 
     }
@@ -245,7 +247,7 @@ public​ ​class​ ​MallardDuck​ ​extends​ ​Duck​ {
     }
 }
 
-public​ ​class​ ​TestDuck​ {
+public​ class TestDuck​ {
     ​public​ ​static​ ​void​ ​main​(String[] args){
         Duck duck = ​new​ MallardDuck(​"Donald"​); 
         duck.setFlyBehavior(​new​ FlapWings()); 
@@ -256,13 +258,25 @@ public​ ​class​ ​TestDuck​ {
     }
 }
 ```
+
+
+
+
+
+
+
+
+
+
 ## Adapter Design pattern
+You have an interface Duck and a class MallardDuck that implements this interface
 ```java
 public​ ​interface​ ​Duck​ { ​
     void​ ​quack​();
 ​    void​ ​fly​(); 
 }
-
+```
+```java
 public​ ​class​ ​MallardDuck​ ​implements​ ​Duck​ { ​
     @Override
     ​public​ ​void​ ​quack​() {
@@ -273,9 +287,11 @@ public​ ​class​ ​MallardDuck​ ​implements​ ​Duck​ { ​
         System.out.println(​"Mallard Duck is flying"​); 
     }
 }
-
-// Duck is need here is need there
-import​ java.util.ArrayList; public​ ​class​ ​DuckClient​ {
+```
+You have an client that loops through all ducks and make them fly and quack
+```java
+import​ java.util.ArrayList; 
+public​ ​class​ ​DuckClient​ {
     ​static​ ArrayList<Duck> myDucks;
     ​public​ ​static​ ​void​ ​main​(String[] args){ 
         myDucks = ​new​ ArrayList<>(); 
@@ -289,14 +305,25 @@ import​ java.util.ArrayList; public​ ​class​ ​DuckClient​ {
         } 
     }
 }
+```
 
-// We have a Turkey method that we want to pass to the same client above
+
+We have a Turkey method that we want to pass to the same client above
+```java
 public​ ​interface​ ​Turkey​ {
 ​   public​ ​void​ ​gobble​();
 ​   public​ ​void​ ​fly​(); 
 }
+```
+Problem: 
+how to make Turkey objects to be used as same clients?
 
-// Turkey adpter is a Duck class now.
+we can write an adapter class that:
+- has the same Duck interface
+- takes in an turkey object
+
+```java
+// Turkey adpter is a Duck class now
 public​ ​class​ ​TurkeyAdapter​ ​implements​ ​Duck​ {
     Turkey turkey;
     TurkeyAdapter(Turkey turkey){ ​
@@ -304,11 +331,13 @@ public​ ​class​ ​TurkeyAdapter​ ​implements​ ​Duck​ {
     }
     ​@Override
     ​public​ ​void​ ​quack​() {
-    ​   //implement this 
+        // implement this
+    ​    turkey.gobble();
     }
     ​@Override
     ​public​ ​void​ ​fly​() {
-    ​   //implement this 
+    ​    //implement this 
+        turkey.fly();
     }
 }
 ```
@@ -333,3 +362,4 @@ public class Singleton {
         return Singleton;
     }
 }
+```

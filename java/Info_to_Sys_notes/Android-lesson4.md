@@ -689,3 +689,269 @@ public static String getJson(URL url){
     return convertStreamToString(getInputStream(url));
 }
 ```
+
+
+# Gradle
+Gradle ​​is the software component that manages the build process for an android app. 
+The build process begins from the source code and ends with the `APK` file.
+The APK file can then be installed on any Android phone.
+
+You may obtain the APK file in Android studio using
+`Build​​ → ​Build APK(s)`
+
+more information about [build process](https://developer.android.com/studio/build/)
+
+Settings for the build process are stored in two `build.gradle` file:
++ the project level file
++ the module level file
+
+## Gradle module level settings
+project-level default settings are usually efficient.
+
+Hence, we need to modify the module-level settings only.
+
+First part shows information such as:
+- Minimum API level
+- Compile API level
+- Target API level
+You can adjust these levels if you need certain API levels.
+
+```java
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.example.norman_lee.displayingdatanew"
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+```
+The following shows the dependency you app has.
+```java
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0-rc02'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:design:28.0.0-rc02'
+    implementation 'com.android.support:recyclerview-v7:28.*'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+```
+`recycler view` and `card view` are not a part of default dependencies.
+
+They were added in, adding them in downloads the packages if you are doing it for the first time.
+
+# Recycler View
+The ​RecyclerView​​ widget allows the user to scroll through the data.
+
+This is done by loading each data item onto its own item in RecyclerView. 
+
+A typical RecyclerView display is shown below.
+
+## How to implement recycler view
+1. add `implementation ​'com.android.support:recyclerview-v7:28.*'` to gradle file
+2. Include the following widget tag in the Activity layout where you want to have the
+recyclerView.
+```java
+<android.support.v7.widget.RecyclerView 
+    android:id=​"@+id/charaRecyclerView" 
+    android:layout_width=​"match_parent" 
+    android:layout_height=​"match_parent"​ />
+```
+3. Assuming each data item is store in the `cardView` design the layout of each data item.
+4. Decide the source of your data:
+    + Stored in the res folder
+    + SQLiteDatabase
+    + Cloud Database
+    + etc
+    This lesson shows you how to use data from a local SQLiteDatabase.
+5. Write an Adapter class that extends the ​`RecyclerView.Adapter<VH>​​` class.
+
+    This class takes in your data source and is called by the Android runtime to display the data on the RecyclerView widget. 
+
+    This class also references the data item that you designed in [step 3].
+6. In the java file for your activity, write code for the following
+    - Get a reference to the recyclerView widget using findViewById()
+    - Get an instance of an object that points to your dataSource
+    - Instantiate your Adapter
+    - Attach the adapter to your recyclerView widget
+    - Attach a Layout manager to your recyclerView widget. A LayoutManager governs
+    how your widgets are going to be displayed. Since we are scrolling up and down, we will just need a LinearLayoutManager.
+
+    Sample code is here
+    ```java
+    recyclerView = findViewById(R.id.charaRecyclerView); 
+    dataSource = ??? ;
+    charaAdapter = ​new​ CharaAdapter(​this​, dataSource ); 
+    recyclerView.setAdapter(charaAdapter); 
+    recyclerView.setLayoutManager(​new​ LinearLayoutManager(​this​));
+    ```
+    This way of coding show you how **delegation** is performed. **Delegation** is the transferring of tasks from one object to a related object.
+
+    __RecyclerView__ object makes use of `Strategy Design Pattern` because:
+    * the role of retrieving data to the `RecyclerView.Adapter` object.
+    * the role of managing layout to the LinearLayoutManager.
+    
+## Writing `RecyclerView Adapter` -static inner class
+The RecyclerView Adapter class is the adapter class between the RecyclerView widget and the object containing your source of data.
+
+Your RecyclerView Adapter should extend the ​`RecyclerView.Adapter<VH>​​ class`. 
+
+VH​​ is a generic class that subclasses ​`RecyclerView.ViewHolder`, which is an ​**abstract class​​** without abstract methods.
+
+Hence, Android is forcing you to subclass this class to use its methods.
+
+This class is meant to hold references to the widgets in each data item layout. Typically, we will write such a class as an inner class within the recyclerView adapter.
+```java
+public​ ​class​ CharaAdapter ​extends RecyclerView.Adapter<CharaAdapter.CharaViewHolder>{
+    ​//code not shown
+    ​static​ ​class​ CharaViewHolder ​extends​ RecyclerView.ViewHolder{
+    ​//code not shown 
+    }
+}
+```
+Having designed your CardView layout for each data item, ​`CharaViewHolder​​` will contain `instance variables` that are meant to hold references to the widgets on the layout.
+The references are obtained by calling ​`findViewById()​​` within the constructor.
+
+## Writing the RecyclerView Adapter - write the constructor and override three methods
+
+Constructor should take in 
+- context object
+- object for data source
+The context object is used to get a layout inflator object to be used in `onCreateViewHolder()`
+
+`RecyclerView.Adapter<VH>` is an abstract class and you have to override three subject methods.
+1. `onCreateViewHolder()` is called by the run-time each time a new data item is added.
+    
+    In the code snippet below:
+    - The CardView layout is inflated
+    - A reference to the layout in memory is returned​ itemView
+    - This reference ​itemView​​ is passed to the constructor of ​CharaViewHolder
+    - CharaViewHolder​​ ​​uses this reference to get references to the individual widgets in
+the layout
+
+    Here is a typical recipe:
+    ```java
+    public CharaViewHolder ​onCreateViewHolder​(@NonNull ViewGroup viewGroup, ​int​ i) {
+        View itemView = mInflater.inflate(R.layout.layout, viewGroup, false​);
+    ​    return​ ​new​ CharaViewHolder(itemView); 
+    }
+    ```
+
+2. `onBindViewHolder()` is meant to 
+    - get the appropriate data from your data source
+    - attach it to the widgets on each data item, according to the adapter position.
+    Hence, the data on row 0 of a table goes on position 0 on the adapter and so on.
+
+3. `getItemCount()​​` is meant to :
+    return the total number of data items. Hence, if you return 0, nothing can be seen on the RecyclerView.
+
+## TODO: get each item respond to clicks
+
+## Swiping To Delete
+We are able to write code to delete a particular ViewHolder when it is swiped left/right. 
+
+The code recipe is to create an instance of `​ItemTouchHelper`
+and attach the `RecyclerView` instance to it.
+
+
+```java 
+ItemTouchHelper itemTouchHelper = ​new​ ItemTouchHelper(simpleCallback);
+itemTouchHelper.attach(recyclerView);
+```
+The constructor takes in an object that extends the ​ItemTouchHelper.SimpleCallback abstract class.
+To use this class,
+- Pass the direction of swiping that you want to detect to its constructor
+- Override ​onSwipe()
+From the documentation, the directions are specified via constants.
+
+As you are going to use this object only once,
+
+an acceptable practice is to use an anonymous abstract class.
+
+As we are coding for swiping, we do not write any other code in ​`onMove()​​`.
+
+
+```java
+ItemTouchHelper.SimpleCallback simpleCallback = ​new ItemTouchHelper.SimpleCallback(​0​, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT ) {
+    ​@Override
+    ​public​ ​boolean​ ​onMove​(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder viewHolder1) {
+    ​   return​ ​false​; 
+    }
+    ​@Override
+    ​public​ ​void​ ​onSwiped​(@NonNull RecyclerView.ViewHolder viewHolder, ​int​ i) {
+
+    } 
+}
+```
+
+Two parameters are passed to ​onSwiped()​​:
+- an instance of the ViewHolder that is currently being swiped
+- the direction (change the variable name of the autogenerated code ... )
+
+The tasks are
++ Downcast​​ the ViewHolder object so that you can use the instance variables or
+methods that you have defined
++ Call your database helper with the required information to delete the particular row in
+the database
++ Display any other UI message e.g. a toast message saying a deletion has been
+happening
++ Notify the RecyclerView adapter that the database has an item removed
+(Where did the ​getAdapterPosition()​​ method come from? )
+
+```java
+CharaAdapter.CharaViewHolder charaViewHolder = (CharaAdapter.CharaViewHolder) viewHolder;
+String name = charaViewHolder.textViewName.getText().toString();
+charaDbHelper.deleteOneRow(name);
+Toast.makeText(RecylerViewActivity.​this​, ​"Deleting "​ + name, Toast.LENGTH_LONG).show();
+charaAdapter.notifyItemRemoved(viewHolder.getAdapterPosition());
+```
+# Card View
+A useful widget that can display data in RecyclerView is the ​CardView​​ widget.
+
+To use CardView, ensure that you have the following dependency in your module-level gradle file:
+
+```java
+implementation ​'com.android.support:cardview-v7:28.0.0'
+```
+
+CardView gives the “card look” to each item.
+- You can change attributes to tweak the look of the cards.
+- You then specify the layout of widgets within a CardView.
+The following specify a cardView and layout within
+```java
+<​android.support.v7.widget.CardView 
+    android:id=​"@+id/cardViewItem" 
+    app:cardPreventCornerOverlap=​"false" 
+    cardCornerRadius=​"5dp" 
+    cardMaxElevation=​"1dp" 
+    cardElevation=​"1dp" 
+    cardUseCompatPadding=​"true" 
+    android:layout_width=​"match_parent" 
+    android:layout_height=​"100dp" 
+    android:layout_margin=​"16dp"​>
+    ​<​RelativeLayout
+    android:id=​"@+id/ard" 
+    android:layout_width=​"match_parent" 
+    android:layout_height=​"match_parent"​>
+    ​<​ImageView​​ /> ​
+    <​TextView​​ /> ​
+    <​TextView​​ /> ​
+    <​TextView​​ />
+    ​</​RelativeLayout​​> 
+</​android.support.v7.widget.CardView​​>
+```

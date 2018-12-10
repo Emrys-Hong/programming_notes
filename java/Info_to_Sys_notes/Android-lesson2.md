@@ -1,6 +1,6 @@
 
 
-## Exception
+# Exception
 
 ```java
 public​ ​class​ ​ExceptionsExample​ {
@@ -28,7 +28,7 @@ public static double calculateExchangeRate(String A, String B)
     }
 ```
 
-## Toast
+# Toast
 How to construct toast
 ```java
 Toast.makeText(MainActivity.​this​, R.string.warning_blank_edit_text,Toast.LENGTH_LONG).show();
@@ -48,8 +48,8 @@ A typical statement to print a message as follows:
 
 ```Log.i(TAG, ​"Empty String"​);```
 
-## XML files
-### res/values folder
+# XML files
+## res/values folder
 Why do we need this:
 1. Different parts of your app can use the same constants
 2. changes can be made in one place instaed of trawling through your code.
@@ -67,7 +67,7 @@ String.xml look like:
 ```
 To access the constant in it, use ```R.string.someString```
 
-### manifest.xml
+## manifest.xml
 it is in ```app/manifest/AndriodManifest.xml```
 
 It stores all the important info about you app:
@@ -85,7 +85,7 @@ everytime you add a new activity, you put this in:
 ```
 The ```andriod:parentActivity``` allows it to go back to its parent.
 
-### EditText widget
+# EditText widget
 ```xml
 <​EditText
 android:id=​"@+id/editTextValue" 
@@ -99,7 +99,7 @@ The ​android:hint​​ ​attribute displays a faint grey text telling the us
 
 The ​android:inputType​​ attribute restricts the type of input into the box. Read the documentation on the allowable inputs.
 
-## Intent
+# Intent
 ### explict intent
 ```java
 Intent intent = ​new​ Intent(MainActivity.​this​, SubActivity.class); 
@@ -122,7 +122,7 @@ Intent intent = getIntent();
 double value = intent.getDoubleExtra(subActivity.KEY, defaultValue);
 ```
 
-## Andriod Activity lifecycle
+# Andriod Activity lifecycle
 ![lifeCycle](Images/lifeCycle.png)
 
 rewrite the arguments
@@ -133,7 +133,7 @@ protected void onResume() {
     Log.i(TAG, "onResume() is created");
 }
 ```
-### Data persistence with SharedPereferences
+# SharedPereferences
 rewriting onPause() When closing the app.
 ```java
 
@@ -162,7 +162,7 @@ protected void onPause() {
 ```
 `mPereferences` is a built in class interface. `getSharedPreferences` is a method that is inherited from the super class, `AppCompactActivity`.
 
-## option menu
+# option menu
 Option menu the `toolbar` and onOptionsItemSelected
 ```java
 Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -189,7 +189,7 @@ public boolean onOptionsItemSelected(MenuItem item) {
 }
 ```
 
-Floating action button
+# Floating action button
 ```java
 FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 fab.setOnClickListener(new View.OnClickListener() {
@@ -201,7 +201,7 @@ fab.setOnClickListener(new View.OnClickListener() {
 });
 ```
 
-## Universial Resource Indicators
+# Universial Resource Indicators
 Absolute URIs specify a scheme e.g.
 
 - A document on the internet: ​http://www.google.com
@@ -217,7 +217,7 @@ Opaque URIs​​ do not have a slash characters and can be parsed as follows:
 
 [scheme : ][opaque part][? Query]
 
-## Implict Intent
+# Implict Intent
 the code below is to lauch aMap App
 1. build the URI to specify the location, we build it in this way, we can reduce the error
 ```java
@@ -240,7 +240,7 @@ if​( intent.resolveActivity(getPackageManager()) != ​null​){
 ```
 For other intents, see [here](https://developer.android.com/guide/components/intents-common)
 
-## Test
+# Test
 ### Unit Test with JUnit4
 - Testing the parts that don’t involve the UI ​(easy)​​: ​unit testing
 - Testing the parts that involve the UI (hard): ​instrumented testing

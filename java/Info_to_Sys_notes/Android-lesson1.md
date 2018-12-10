@@ -63,7 +63,7 @@ protected​ ​void​ ​onCreate​(Bundle savedInstanceState) { ​
 ```
 
 ## Resource ID
-### Widget ID
+### idget ID
 If your widget has the following attribute
 android:id =”@+id/myWidget” then it can be accessed by ​R.id.myWidget​​.
 
@@ -79,7 +79,7 @@ textView.setText(​"My New String"​)
 ### Images in drawables
 If you have an image stored in the drawable folder named ​pikachu.png​​, then it can be accessed by ​R.drawable.pikachu​​. (image file names must be lowercase)
 
-## R class
+### R class
 When the app is compiled, a ​R class​​ is generated that contains IDs to the resources in the res​​ folder.
 Since ​```activity_main.xml​​``` is stored in the layout folder, its R class reference is ```R.layout.activity_main​​.```
 

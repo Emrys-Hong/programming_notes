@@ -1,10 +1,10 @@
 # Table of contents
 - [AsyncTask](##AsyncTasks)
 - [Modify the android Manifest to set permissions and fix the orientation](#Manifest)
-- [Build an URL object](###Building-URL)
+- [Build an URL object](#Building-URL)
 - [Download JSON data given a URL of an API call](##AsyncTasks)
-- [Parse JSON data using the JSONObject class](##AsyncTasks)
-- [Download an Image file given a URL](##AsyncTasks)
+- [Parse JSON data using the JSONObject class](#Parse-json)
+- [Download an Image file given a URL](#download-image-using-url)
 
 
 
@@ -86,7 +86,7 @@ if (Utils.isNetworkAvailable(MainActivity.this)) {
 }
 ```
 
-### Building-URL
+# Building URL
 In MainActivity class
 ```java
 private URL buildURL(String comicNo){
@@ -137,6 +137,20 @@ public void onClick(View v) {
     }
 }
 ```
+# Parse json
+Get an string out of an json file
+```java
+JSONObject jsonObject = new JSONObject(JSONString);
+                String safe_title = jsonObject.getString("safe_title");
+```
+
+# download image using url
+Using methods in Utils
+```java
+bitmap = Utils.getBitmap(bitmapUrl);
+```
+
+
 
 ### facilitate functions
 ```java
@@ -144,6 +158,12 @@ public​ ​static​ String ​getJson​(URL url)
 public​ ​static​ Bitmap ​getBitmap​(URL url)
 public​ ​static​ ​boolean​ ​isNetworkAvailable​(Context context)
 ```
+
+
+
+
+
+
 
 ## Manifest
 Modifying manifest to:

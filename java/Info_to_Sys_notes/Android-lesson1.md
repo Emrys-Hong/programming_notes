@@ -1,4 +1,4 @@
-## Random
+# Random
 * nextInt()​​ gives you an integer between 0 and 232 (exclusive)
 * nextInt(n)​​ gives you an integer between 0 and n (exclusive)
 * nextDouble()​​ gives you a double between 0.0 and 1.0
@@ -14,24 +14,32 @@ Date d = ​new​ Date();
 Random r = ​new​ Random(d.getTime());
 ```
 
-## layout
+## layouts
 replace the Constraint layout with ```​LinearLayout​​.``` as it is linear
 
 There are two possible orientations: ```horizontal```, ```vertical```.
 
+# Widget
 ## TextView Widget
 The ​id​​ attribute ​​enables you to give a unique ID to each widget in the XML layout file. This allows you to access the widget through the java code.
 
 The ​text​​ attribute​​ specifies the text that the widget should contain.
 ```xml
 <​TextView
-    android:id=​"@+id/myTextView" android:layout_width=​"wrap_content" android:layout_height=​"wrap_content" android:layout_gravity=​"center" android:gravity=​"end" android:text=​"second"​/>
+    android:id=​"@+id/myTextView" 
+    android:layout_width=​"wrap_content"
+    android:layout_height=​"wrap_content"
+    android:layout_gravity=​"center" 
+    android:gravity=​"end" android:text=​"second"​/>
 ```
 
 ## Button Widget
 ```xml
 <​Button
-    android:id=​"@+id/myButton" android:layout_width=​"match_parent" android:layout_height=​"wrap_content" android:text=​"Click Me"​/>
+    android:id=​"@+id/myButton" 
+    android:layout_width=​"match_parent"
+    android:layout_height=​"wrap_content" 
+    android:text=​"Click Me"​/>
 ```
 
 ## Alignment for Widget
@@ -53,13 +61,6 @@ protected​ ​void​ ​onCreate​(Bundle savedInstanceState) { ​
     setContentView(R.layout.activity_main);
 }
 ```
-### R class
-When the app is compiled, a ​R class​​ is generated that contains IDs to the resources in the res​​ folder.
-Since ​```activity_main.xml​​``` is stored in the layout folder, its R class reference is ```R.layout.activity_main​​.```
-
-```R.layout.activity_main``` ​​is passed to the ​setContentView​​ method to ​inflate the layout​​. Andriod Studio reads the xml file and instantiates the result.
-
-R class can be found at ```app/build/generated/source/r/debug/<your.package.name>```
 
 ## Resource ID
 ### Widget ID
@@ -77,6 +78,16 @@ textView.setText(​"My New String"​)
 
 ### Images in drawables
 If you have an image stored in the drawable folder named ​pikachu.png​​, then it can be accessed by ​R.drawable.pikachu​​. (image file names must be lowercase)
+
+## R class
+When the app is compiled, a ​R class​​ is generated that contains IDs to the resources in the res​​ folder.
+Since ​```activity_main.xml​​``` is stored in the layout folder, its R class reference is ```R.layout.activity_main​​.```
+
+```R.layout.activity_main``` ​​is passed to the ​setContentView​​ method to ​inflate the layout​​. Andriod Studio reads the xml file and instantiates the result.
+
+R class can be found at ```app/build/generated/source/r/debug/<your.package.name>```
+
+
 
 
 ## Bind a button to a variable

@@ -1,9 +1,10 @@
 ## Table of Contents
-
-
-
-
-
+- [Database](#Database)
+- [Cursor](#Using-cursor-object)
+- [Intents](#Intents-startActivityForResult())
+- [Gradle](#Gradle)
+- [RecyclerView](#Recycler-View)
+- [CardView](#CardView)
 
 
 
@@ -402,7 +403,7 @@ static class CharaData{
 ```
 ____________________________________________________________________________________
 
-## Intents startActivityForResult()
+# Intents startActivityForResult()
 ### Recab
 - `Explict intents` bring you from one activity to another. Data can be passed during
 this process.
@@ -762,7 +763,7 @@ This is done by loading each data item onto its own item in RecyclerView.
 
 A typical RecyclerView display is shown below.
 
-## How to implement recycler view
+## Implementation Procedure
 1. add `implementation ​'com.android.support:recyclerview-v7:28.*'` to gradle file
 2. Include the following widget tag in the Activity layout where you want to have the
 recyclerView.
@@ -779,12 +780,17 @@ recyclerView.
     + Cloud Database
     + etc
     This lesson shows you how to use data from a local SQLiteDatabase.
+
 5. Write an Adapter class that extends the ​`RecyclerView.Adapter<VH>​​` class.
 
     This class takes in your data source and is called by the Android runtime to display the data on the RecyclerView widget. 
 
     This class also references the data item that you designed in [step 3].
-6. In the java file for your activity, write code for the following
+    ```java
+    public class CharaAdapter extends RecyclerView.Adapter<CharaAdapter.CharaViewHolder>
+    ```
+
+6. In the `RecyclerViewActivity`, write code for the following
     - Get a reference to the recyclerView widget using findViewById()
     - Get an instance of an object that points to your dataSource
     - Instantiate your Adapter
@@ -795,13 +801,12 @@ recyclerView.
     Sample code is here
     ```java
     recyclerView = findViewById(R.id.charaRecyclerView); 
-    dataSource = ??? ;
-    charaAdapter = ​new​ CharaAdapter(​this​, dataSource ); 
+    charaDbHelper = CharaDbHelper.createCharaDbHelper(this);
+    charaAdapter = new charaAdapter(this, charaDbHelper);  // this is determined by charaAdapter constructor class
     recyclerView.setAdapter(charaAdapter); 
     recyclerView.setLayoutManager(​new​ LinearLayoutManager(​this​));
     ```
     This way of coding show you how **delegation** is performed. **Delegation** is the transferring of tasks from one object to a related object.
-
     __RecyclerView__ object makes use of `Strategy Design Pattern` because:
     * the role of retrieving data to the `RecyclerView.Adapter` object.
     * the role of managing layout to the LinearLayoutManager.
@@ -818,9 +823,21 @@ Hence, Android is forcing you to subclass this class to use its methods.
 This class is meant to hold references to the widgets in each data item layout. Typically, we will write such a class as an inner class within the recyclerView adapter.
 ```java
 public​ ​class​ CharaAdapter ​extends RecyclerView.Adapter<CharaAdapter.CharaViewHolder>{
-    ​//code not shown
-    ​static​ ​class​ CharaViewHolder ​extends​ RecyclerView.ViewHolder{
-    ​//code not shown 
+    ​//TODO 9.2 Complete the constructor to initialize the widgets
+    static class CharaViewHolder extends RecyclerView.ViewHolder{
+
+        public TextView textViewName;
+        public TextView textViewDescription;
+        public TextView textViewPosition;
+        public ImageView imageViewChara;
+
+        public CharaViewHolder(View view){
+            super(view);
+            textViewName = view.findViewById(R.id.cardViewTextName);
+            textViewDescription = view.findViewById(R.id.cardViewTextDescription);
+            textViewPosition = view.findViewById(R.id.cardViewTextCount);
+            imageViewChara = view.findViewById(R.id.cardViewImage);
+        }
     }
 }
 ```
@@ -832,6 +849,14 @@ The references are obtained by calling ​`findViewById()​​` within the cons
 Constructor should take in 
 - context object
 - object for data source
+
+Example Code
+```java
+public CharaAdapter(Context context, CharaDbHelper charaDbHelper) {
+    mInflater = LayoutInflater.from(context);
+    this.context = context;
+    this.charaDbHelper = charaDbHelper;
+}
 The context object is used to get a layout inflator object to be used in `onCreateViewHolder()`
 
 `RecyclerView.Adapter<VH>` is an abstract class and you have to override three subject methods.
@@ -844,11 +869,13 @@ The context object is used to get a layout inflator object to be used in `onCrea
     - CharaViewHolder​​ ​​uses this reference to get references to the individual widgets in
 the layout
 
-    Here is a typical recipe:
+    Example code
     ```java
-    public CharaViewHolder ​onCreateViewHolder​(@NonNull ViewGroup viewGroup, ​int​ i) {
-        View itemView = mInflater.inflate(R.layout.layout, viewGroup, false​);
-    ​    return​ ​new​ CharaViewHolder(itemView); 
+    @NonNull
+    @Override
+    public CharaViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        View itemView = mInflater.inflate(R.layout.layout, viewGroup, false);
+        return new CharaViewHolder(itemView);
     }
     ```
 
@@ -856,9 +883,27 @@ the layout
     - get the appropriate data from your data source
     - attach it to the widgets on each data item, according to the adapter position.
     Hence, the data on row 0 of a table goes on position 0 on the adapter and so on.
+    Example code
+```java
+@Override
+public void onBindViewHolder(@NonNull CharaViewHolder charaViewHolder, int i) {
+    CharaDbHelper.CharaData charaData = charaDbHelper.queryOneRow(i);
+    charaViewHolder.textViewName.setText(charaData.getName());
+    charaViewHolder.textViewPosition.setText(Integer.toString(i));
+    charaViewHolder.textViewDescription.setText(charaData.getDescription());
+    charaViewHolder.imageViewChara.setImageBitmap(charaData.getBitmap());
+}
+```
 
 3. `getItemCount()​​` is meant to :
     return the total number of data items. Hence, if you return 0, nothing can be seen on the RecyclerView.
+```java
+@Override
+    public int getItemCount() {
+        return (int)charaDbHelper.queryNumRows();
+    }
+```
+
 
 ## TODO: get each item respond to clicks
 
@@ -920,7 +965,63 @@ charaDbHelper.deleteOneRow(name);
 Toast.makeText(RecylerViewActivity.​this​, ​"Deleting "​ + name, Toast.LENGTH_LONG).show();
 charaAdapter.notifyItemRemoved(viewHolder.getAdapterPosition());
 ```
-# Card View
+
+more implementation on overwriting [SimpleCallBack](https://medium.com/@ipaulpro/drag-and-swipe-with-recyclerview-b9456d2b1aaf).
+
+Overall Code example:
+```java
+public class RecylerViewActivity extends AppCompatActivity {
+
+    RecyclerView recyclerView;
+    CharaAdapter charaAdapter;
+    CharaDbHelper charaDbHelper;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_recyler_view);
+
+        //TODO 9.7 The standard code to fill the recyclerview with data
+        recyclerView = findViewById(R.id.charaRecyclerView);
+        // adapter design pattern
+        charaDbHelper = CharaDbHelper.createCharaDbHelper(this);
+        charaAdapter = new CharaAdapter(this, charaDbHelper);
+        // strategy design pattern
+        recyclerView.setAdapter(charaAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+
+
+
+
+
+        //TODO 9.8 Put in code to allow each recyclerview item to be deleted when swiped
+        ItemTouchHelper.SimpleCallback simpleCallback = new ItemTouchHelper.SimpleCallback(0,
+                ItemTouchHelper.LEFT|ItemTouchHelper.RIGHT) {
+            @Override
+            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder viewHolder1) {
+                return false;
+            }
+
+            @Override
+            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
+                //TODO attention svp - to write this code has to make CharaViewHolder class static
+                CharaAdapter.CharaViewHolder charaViewHolder = (CharaAdapter.CharaViewHolder) viewHolder;
+                String name = charaViewHolder.textViewName.getText().toString();
+                charaDbHelper.deleteOneRow(name);
+                Toast.makeText(RecylerViewActivity.this, "Deleting Row", Toast.LENGTH_LONG).show();
+                charaAdapter.notifyItemRemoved(viewHolder.getAdapterPosition());
+            }
+        };
+        //TODO 9.9 attach the recyclerView to helper
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(simpleCallback);
+        itemTouchHelper.attachToRecyclerView(recyclerView);
+
+    }
+}
+```
+
+# CardView
 A useful widget that can display data in RecyclerView is the ​CardView​​ widget.
 
 To use CardView, ensure that you have the following dependency in your module-level gradle file:

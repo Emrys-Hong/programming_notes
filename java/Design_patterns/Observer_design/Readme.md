@@ -4,4 +4,4 @@ you have a class(Subcriber) that wants to automatically follows the status or ch
 such as a broadcast system, every time there is a new update, it will update to all of its subscribers.
 
 ## how to use
-refers to code structure.
+![code structure](code_structure.png)

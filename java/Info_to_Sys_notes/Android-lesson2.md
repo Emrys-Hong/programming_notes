@@ -1,5 +1,8 @@
-
-
+TODO: Coordinator layout
+TODO: mainActivity layout
+TODO: conversion
+TODO: for Toast show method must have
+TODO: SubActivity parent activity is main Activity still cannot run
 # Exception
 
 ```java
@@ -79,9 +82,9 @@ It stores all the important info about you app:
 everytime you add a new activity, you put this in:
 ```xml
 <activity
-            android:name=".SubActivity"
-            android:label="@string/sub_activity_name"
-            android:parentActivityName=".MainActivity" />
+    android:name=".SubActivity"
+    android:label="@string/sub_activity_name"
+    android:parentActivityName=".MainActivity" />
 ```
 The ```andriod:parentActivity``` allows it to go back to its parent.
 
@@ -122,7 +125,10 @@ Intent intent = getIntent();
 double value = intent.getDoubleExtra(subActivity.KEY, defaultValue);
 ```
 
+
 # Andriod Activity lifecycle
+TODO: search for google, what does each callback called when we do what.
+
 ![lifeCycle](Images/lifeCycle.png)
 
 rewrite the arguments
@@ -133,7 +139,11 @@ protected void onResume() {
     Log.i(TAG, "onResume() is created");
 }
 ```
+
+
+
 # SharedPereferences
+
 rewriting onPause() When closing the app.
 ```java
 
@@ -163,11 +173,10 @@ protected void onPause() {
 `mPereferences` is a built in class interface. `getSharedPreferences` is a method that is inherited from the super class, `AppCompactActivity`.
 
 # option menu
+the content is in  `res/xml`  file
+
 Option menu the `toolbar` and onOptionsItemSelected
 ```java
-Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-setSupportActionBar(toolbar);
-
 public boolean onOptionsItemSelected(MenuItem item) {
     // Handle action bar item clicks here. The action bar will
     // automatically handle clicks on the Home/Up button, so long
@@ -178,7 +187,6 @@ public boolean onOptionsItemSelected(MenuItem item) {
     if (id == R.id.action_settings) {
         return true;
     }
-
     if (id == R.id.menu_set_exchange_rate) {
         // TODO write intent here
         Intent intent = new Intent(this, SubActivity.class);
@@ -188,6 +196,14 @@ public boolean onOptionsItemSelected(MenuItem item) {
     return super.onOptionsItemSelected(item);
 }
 ```
+
+# ToolBar
+```
+Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+setSupportActionBar(toolbar);
+```
+TODO: create a topic of them together.
+
 
 # Floating action button
 ```java
@@ -239,6 +255,9 @@ if​( intent.resolveActivity(getPackageManager()) != ​null​){
 }
 ```
 For other intents, see [here](https://developer.android.com/guide/components/intents-common)
+
+TODO: explain more on each line `resolveActvivity` mean.
+
 
 # Test
 ### Unit Test with JUnit4
@@ -324,3 +343,6 @@ public boolean onOptionsItemSelected(MenuItem item) {
     return super.onOptionsItemSelected(item);
 }
 ```
+
+Extend more on exchange rate testing.
+

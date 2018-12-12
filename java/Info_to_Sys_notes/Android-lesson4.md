@@ -8,7 +8,10 @@
 
 
 
-
+TODO: for createCharaDbHelper why context is context.getApplicationContext().
+TODO: BitmapFactory.decodeByteArray(bit_file, 0, bit_file.length)
+TODO: gather all the intent together.
+TODO: pay more attention to context get application context
 
 # Database
 A relational database (“SQL database”) has its data stored in tables. The closest thing you might be familiar with is having data in a spreadsheet.

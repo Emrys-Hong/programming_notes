@@ -7,6 +7,15 @@
 - [Download an Image file given a URL](#download-image-using-url)
 
 
+TODO: all the exceptions brought up across different classes.
+TODO: relating to input string
+TODO: what are the builders to build the pattern.
+TODO: normal errors:
+1. Toast have the show
+2. forget the user does not enter anything or normal exceptions.
+
+TODO: json object and  url object.
+
 
 ## App 
 Github project: [lesson3](https://github.com/ISTD50001/lesson-3-Emrys-Hong/blob/master/app/src/main/java/com/example/norman_lee/comicapp/MainActivity.java)

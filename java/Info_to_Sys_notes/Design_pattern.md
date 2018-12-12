@@ -44,6 +44,9 @@ Advantage:
 1. You can overload your constructor to initialize your class with different states, but you are constrained by Java to have the same name for all constructors.
 1. On the other hand, you can give your static factory method meaningful names to describe what you are doing.
 
+We can right click and choose `refactor code` and choose `factory method` to make a class into a factory Design pattern.
+
+
 (We want to strict first, and then release, it is easier)
 ```java
 public​ ​class​ ​Tea​ { ​
@@ -75,6 +78,8 @@ We may solve this problem by introducing a ​static nested class​​, usually
 - One method that returns the actual object
   
 you should take the constructors private
+
+We can right click and choose `refactor code` to make a class into a builder Design pattern.
 
 for example:
 ```java

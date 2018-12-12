@@ -1,3 +1,5 @@
+TODO: the layout.xml matters a lot.
+TODO: pay more attention to static and final
 # Random
 * nextInt()​​ gives you an integer between 0 and 232 (exclusive)
 * nextInt(n)​​ gives you an integer between 0 and n (exclusive)

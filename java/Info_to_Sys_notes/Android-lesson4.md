@@ -637,7 +637,6 @@ public class DataEntryActivity extends AppCompatActivity {
             }catch(FileNotFoundException ex){
                 ex.printStackTrace();
             }
-
         }
     }
 }

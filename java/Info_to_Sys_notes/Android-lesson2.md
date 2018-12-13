@@ -1,8 +1,4 @@
-TODO: Coordinator layout
-TODO: mainActivity layout
-TODO: conversion
-TODO: for Toast show method must have
-TODO: SubActivity parent activity is main Activity still cannot run
+
 # Exception
 
 ```java
@@ -202,7 +198,7 @@ public boolean onOptionsItemSelected(MenuItem item) {
 Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 setSupportActionBar(toolbar);
 ```
-TODO: create a topic of them together.
+
 
 
 # Floating action button

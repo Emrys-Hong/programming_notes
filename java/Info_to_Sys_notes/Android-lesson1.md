@@ -1,5 +1,3 @@
-TODO: the layout.xml matters a lot.
-TODO: pay more attention to static and final
 # Random
 * nextInt()​​ gives you an integer between 0 and 232 (exclusive)
 * nextInt(n)​​ gives you an integer between 0 and n (exclusive)
@@ -136,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Integer> images;
     Button charaButton;
     ImageView charaImage;
-    TextView charaTextView; // TODO: add this in
+    TextView charaTextView; 
     Button myButton;
     int count = 0 ;
     @Override

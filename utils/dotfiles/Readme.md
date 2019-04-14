@@ -14,6 +14,8 @@ how to use each function: https://blog.jez.io/vim-as-an-ide/
 ```
 
 all about vim: https://www.fullstackpython.com/vim.html \
+ctags explained in detail: https://ricostacruz.com/til/navigate-code-with-ctags\
+ctags tricks: https://stackoverflow.com/questions/563616/vim-and-ctags-tips-and-tricks\
 search `vim as an ide`:\
 a good example but too fancy: https://coderoncode.com/tools/2017/04/16/vim-the-perfect-ide.html\
 other vim learning resources:\
